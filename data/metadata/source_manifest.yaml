@@ -229,3 +229,19 @@ sources:
     generated test cases from subagents and actions, Q&A tests from knowledge content,
     uploaded custom scenarios, and the need to test non-deterministic AI agents across
     many scenarios.
+- id: agentforce-agent-versioning-lifecycle
+  title: Versioning and Editing Agents
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_versions_lifecycle.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Testing, Deployment, & Maintenance
+  product_area: Agentforce Platform
+  topic: Agent Versioning Lifecycle
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining agent draft versions, modifying
+    and testing changes, activating agents, and creating new versions during the agent
+    lifecycle.
