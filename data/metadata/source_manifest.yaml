@@ -525,3 +525,19 @@ sources:
   notes: Official Salesforce Help source explaining ways to create agents, including
     creating an agent from a template with relevant subagents, actions, default system
     messages, variables, filters, and required permissions.
+- id: agentforce-filters-subagents-actions
+  title: Create a Filter to Control Access to Subagents and Actions
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_asset_filters.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Agent Filters
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining filters that control access to
+    subagents and actions based on variables, including authentication-related filters
+    for customer channels.
