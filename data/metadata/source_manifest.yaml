@@ -245,3 +245,18 @@ sources:
   notes: Official Salesforce Help source explaining agent draft versions, modifying
     and testing changes, activating agents, and creating new versions during the agent
     lifecycle.
+- id: agentforce-deploy-agent-to-channels
+  title: Deploy Your Agent to Channels
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_parent_deploy.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Testing, Deployment, & Maintenance
+  product_area: Agentforce Platform
+  topic: Agent Deployment Channels
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining that agents are activated and
+    deployed to channels to make them available to customers or employees.
