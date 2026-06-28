@@ -557,3 +557,18 @@ sources:
   notes: Official Salesforce Help source explaining how to give users access to an
     Agentforce Employee agent by adding the agent to a permission set or profile in
     Setup.
+- id: agentforce-agent-user-permissions-best-practices
+  title: Best Practices for Agent User Permissions
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_user.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Agent User Permissions
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source for best practices around agent user permissions
+    and secure agent access to data and actions.
