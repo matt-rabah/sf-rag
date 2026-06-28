@@ -415,3 +415,19 @@ sources:
   notes: Official Salesforce Help source explaining how Prompt Builder can configure
     and add existing actions such as Flows, Apex, and Retrievers directly to a prompt
     template.
+- id: prompt-builder-use-multiple-versions
+  title: Use Multiple Versions of a Prompt Template
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_use_multiple_versions.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Prompt Engineering
+  product_area: Agentforce Platform
+  topic: Prompt Template Versioning
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining how to create and use multiple
+    prompt template versions in Prompt Builder to compare prompt constructions and
+    results.
