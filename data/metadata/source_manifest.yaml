@@ -718,3 +718,49 @@ sources:
   release_relevance: current
   authority: official
   notes: Official Salesforce Help source explaining Agentforce data masking limitations, Trust Layer protections beyond data masking, and zero data retention for information sent to LLMs outside the Salesforce trust boundary.
+
+
+- id: agentforce-agent-script
+  title: Agent Script
+  source_type: developer_docs
+  source_url: https://developer.salesforce.com/docs/ai/agentforce/guide/agent-script.html
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Agent Script
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Agentforce Developer Guide source explaining Agent Script, the language for building agents in Agentforce Builder, combining natural language flexibility with deterministic programmatic expressions, conditional logic, subagent transitions, action chaining, and variables.
+
+- id: agentforce-new-builder-overview
+  title: Explore the New Agentforce Builder
+  source_type: trailhead
+  source_url: https://trailhead.salesforce.com/content/learn/modules/new-agentforce-builder-quick-look/explore-the-new-agentforce-builder
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: New Agentforce Builder
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Trailhead source explaining the new Agentforce Builder highlights, including more determinism from the upgraded Atlas reasoning engine, programmatic control with Agent Script, built-in assistance, an improved file-based interface, and powerful agent previews.
+
+- id: agentforce-builder-canvas-script-views
+  title: Canvas and Script Views in Agentforce Builder
+  source_type: trailhead
+  source_url: https://trailhead.salesforce.com/content/learn/modules/new-agentforce-builder-quick-look/explore-the-new-agentforce-builder
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Canvas and Script Views
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Trailhead source explaining Agentforce Builder components, including the Explorer, Canvas view, Script view, the Canvas/Script toggle, the Preview panel, Commit Version, and how Canvas and Script views stay in sync.
