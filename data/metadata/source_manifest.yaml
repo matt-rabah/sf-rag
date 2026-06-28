@@ -764,3 +764,64 @@ sources:
   release_relevance: current
   authority: official
   notes: Official Salesforce Trailhead source explaining Agentforce Builder components, including the Explorer, Canvas view, Script view, the Canvas/Script toggle, the Preview panel, Commit Version, and how Canvas and Script views stay in sync.
+
+
+- id: prompt-builder-change-set-considerations
+  title: Change Set Considerations for Prompt Templates
+  source_type: salesforce_help
+  source_url: quickstart_your_einstein_generative_ai_solution_6-28-2026.pdf
+  certification: Agentforce Specialist
+  exam_domain: Testing, Deployment, & Maintenance
+  product_area: Prompt Builder
+  topic: Deploying Prompt Templates
+  priority: medium
+  status: active
+  retrieved_date: 2026-06-28
+  release_relevance: current
+  authority: official
+  notes: Deployment considerations when using change sets with Prompt Builder
+
+- id: prompt-builder-cli-considerations
+  title: Salesforce CLI Considerations for Prompt Templates
+  source_type: salesforce_help
+  source_url: quickstart_your_einstein_generative_ai_solution_6-28-2026.pdf
+  certification: Agentforce Specialist
+  exam_domain: Testing, Deployment, & Maintenance
+  product_area: Prompt Builder
+  topic: Deploying Prompt Templates
+  priority: medium
+  status: active
+  retrieved_date: 2026-06-28
+  release_relevance: current
+  authority: official
+  notes: Deployment considerations when using Salesforce CLI with Prompt Builder
+
+- id: prompt-builder-deployment-considerations
+  title: Deployment Considerations for Prompt Templates
+  source_type: salesforce_help
+  source_url: quickstart_your_einstein_generative_ai_solution_6-28-2026.pdf
+  certification: Agentforce Specialist
+  exam_domain: Testing, Deployment, & Maintenance
+  product_area: Prompt Builder
+  topic: Deploying Prompt Templates
+  priority: medium
+  status: active
+  retrieved_date: 2026-06-28
+  release_relevance: current
+  authority: official
+  notes: Deployment considerations for packages with Prompt Builder
+
+- id: prompt-builder-packaging-considerations
+  title: Packaging Considerations for Prompt Templates
+  source_type: salesforce_help
+  source_url: quickstart_your_einstein_generative_ai_solution_6-28-2026.pdf
+  certification: Agentforce Specialist
+  exam_domain: Testing, Deployment, & Maintenance
+  product_area: Prompt Builder
+  topic: Deploying Prompt Templates
+  priority: medium
+  status: active
+  retrieved_date: 2026-06-28
+  release_relevance: current
+  authority: official
+  notes: Packaging considerations for Prompt Builder
