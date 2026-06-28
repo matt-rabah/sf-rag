@@ -80,46 +80,75 @@ def load_jsonl(path: Path):
 
 def score_chunk(question: str, chunk: dict):
     query_terms = set(tokenize(question))
-    exam_domain_terms = set(tokenize(chunk.get("exam_domain", "")))
-    heading_terms = set(tokenize(chunk.get("chunk_heading", "")))
-    topic_terms = set(tokenize(chunk.get("topic", "")))
 
-    chunk_text = " ".join(
+    heading = chunk.get("chunk_heading", "")
+    chunk_text = chunk.get("chunk_text", "")
+    exam_domain = chunk.get("exam_domain", "")
+    topic = chunk.get("topic", "")
+
+    combined_text = " ".join(
         [
             chunk.get("title", ""),
-            chunk.get("exam_domain", ""),
+            exam_domain,
             chunk.get("product_area", ""),
-            chunk.get("topic", ""),
-            chunk.get("chunk_heading", ""),
-            chunk.get("chunk_text", ""),
+            topic,
+            heading,
+            chunk_text,
         ]
     )
 
-    chunk_terms = set(tokenize(chunk_text))
+    chunk_terms = set(tokenize(combined_text))
 
     if not query_terms:
         return 0
 
     overlap = query_terms.intersection(chunk_terms)
-
     score = len(overlap)
 
-    # Boost chunks where the question overlaps with structured metadata.
-    score += 2 * len(query_terms.intersection(exam_domain_terms))
-    score += 2 * len(query_terms.intersection(heading_terms))
-    score += 1 * len(query_terms.intersection(topic_terms))
-
-    # Boost exam outline chunks for weighting/percentage questions.
     question_normalized = normalize_text(question)
-    heading_normalized = normalize_text(chunk.get("chunk_heading", ""))
+    heading_normalized = normalize_text(heading)
+    chunk_text_normalized = normalize_text(chunk_text)
+    combined_normalized = normalize_text(combined_text)
 
-    if any(term in question_normalized for term in ["weight", "weighting", "percentage", "percent"]):
-        if "%" in chunk.get("chunk_heading", "") or "%" in chunk.get("chunk_text", ""):
-            score += 3
+    score += 2 * len(query_terms.intersection(set(tokenize(exam_domain))))
+    score += 2 * len(query_terms.intersection(set(tokenize(heading))))
+    score += 1 * len(query_terms.intersection(set(tokenize(topic))))
 
-    # Boost chunks that look like exam outline sections.
-    if re.search(r"\b\d{1,2}%\b", chunk.get("chunk_heading", "")):
-        score += 2
+    is_weight_question = any(
+        term in question_normalized
+        for term in [
+            "weight",
+            "weighting",
+            "weighted",
+            "percentage",
+            "percent",
+            "highest",
+            "domain",
+            "exam domain",
+        ]
+    )
+
+    if is_weight_question:
+        if "exam domain weight summary" in heading_normalized:
+            score += 15
+
+        if "domain weight" in combined_normalized:
+            score += 8
+
+        if "highest weighted" in combined_normalized or "highest-weighted" in chunk_text.lower():
+            score += 8
+
+        if "%" in heading or "%" in chunk_text:
+            score += 5
+
+        if "audience description" in heading_normalized:
+            score -= 5
+
+        if "about the salesforce certified agentforce specialist exam" in heading_normalized:
+            score -= 3
+
+    if re.search(r"\b\d{1,2}%\b", heading):
+        score += 3
 
     return score
 
