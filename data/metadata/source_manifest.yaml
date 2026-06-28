@@ -477,3 +477,19 @@ sources:
   authority: official
   notes: Official Salesforce Help source explaining how to create a Flex prompt template
     and use flexible inputs for reusable prompt use cases.
+- id: prompt-builder-answer-questions-with-knowledge-template
+  title: Create an Answer Questions with Knowledge Prompt Template
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_answer_questions_with_knowledge.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Prompt Engineering
+  product_area: Agentforce Platform
+  topic: Answer Questions with Knowledge Prompt Template
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining how Answer Questions with Knowledge
+    prompt templates use Agentforce Data Libraries, standard prompt template structure,
+    LLM instructions, data resources, and user query inputs.
