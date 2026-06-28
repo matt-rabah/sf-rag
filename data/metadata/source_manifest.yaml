@@ -715,3 +715,19 @@ sources:
   authority: official
   notes: Official Salesforce Help source explaining Einstein Trust Layer toxicity
     detection for identifying and flagging toxic content in prompts and responses.
+- id: einstein-audit-and-feedback-data
+  title: Einstein Audit and Feedback Data
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_feedback.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Governance & Observability
+  product_area: Einstein Trust Layer
+  topic: Audit and Feedback Data
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining how generative AI audit data,
+    also known as audit trail, tracks Einstein Trust Layer functionality such as data
+    masking and toxicity detection.

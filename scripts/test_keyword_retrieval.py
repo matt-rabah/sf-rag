@@ -283,6 +283,30 @@ def score_chunk(question: str, chunk: dict):
         if normalize_text(topic) == "subagent classification and routing":
             score -= 10
 
+    # Boost Trust Layer response journey chunks for audit/feedback storage questions.
+    is_trust_layer_storage_question = (
+        ("audit and feedback" in question_normalized and "stored" in question_normalized)
+        or ("where" in question_normalized and "audit" in question_normalized and "feedback" in question_normalized)
+        or ("data 360" in question_normalized and "audit" in question_normalized)
+        or ("customers control" in question_normalized and "audit" in question_normalized)
+    )
+
+    if is_trust_layer_storage_question:
+        if normalize_text(topic) == "trust layer response journey":
+            score += 16
+
+        if "audit and feedback data are stored" in combined_normalized:
+            score += 14
+
+        if "data 360" in combined_normalized:
+            score += 10
+
+        if "customers control" in combined_normalized:
+            score += 10
+
+        if normalize_text(topic) == "audit and feedback data":
+            score -= 6
+
     # Boost Agent Router / subagent classification chunks for routing questions.
     # Do not apply this boost to Preview/Test review questions.
     is_agent_router_question = (
