@@ -1,18 +1,18 @@
 sources:
-  - id: agentforce-data-library-overview
-    title: Agentforce Data Library Overview
+  - id: example-source-id
+    title: Example Source Title
     source_type: salesforce_help
-    source_url: PASTE_OFFICIAL_SALESFORCE_HELP_URL_HERE
+    source_url: https://example.com/source-page
     certification: Agentforce Specialist
-    exam_domain: Data 360 Fundamentals
-    product_area: Data 360
-    topic: Agentforce Data Library
+    exam_domain: Agentforce and Data 360
+    product_area: Agentforce
+    topic: Example Topic
     priority: high
-    status: draft
-    retrieved_date: 2026-06-28
-    release_relevance: needs_review
+    status: pending
+    retrieved_date:
+    release_relevance: current
     authority: official
-    notes: Official Salesforce Help source for Agentforce Data Library concepts relevant to Data 360 Fundamentals.
+    notes: Add source-level notes here.
 
 allowed_values:
   source_type:
