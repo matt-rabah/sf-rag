@@ -1,84 +1,92 @@
 sources:
-  - id: agentforce-specialist-exam-guide-spring-26
-    title: Salesforce Certified Agentforce Specialist Exam Guide Spring 2026
-    source_type: exam_guide
-    source_url: https://help.salesforce.com/s/articleView?id=005298924&type=1
-    certification: Agentforce Specialist
-    exam_domain: Exam Overview
-    product_area: Agentforce
-    topic: Certification Exam Guide
-    priority: high
-    status: active
-    retrieved_date: 2026-06-27
-    release_relevance: current
-    authority: official
-    notes:
-      Primary control document for Spring '26 Agentforce Specialist exam scope, domain weights, and
-      source planning.
-
-  - id: agentforce-data-library-concept
-    title: What Are Data Libraries?
-    source_type: salesforce_help
-    source_url: https://help.salesforce.com/s/articleView?id=ai.data_library_concept.htm&language=en_US&type=5
-    certification: Agentforce Specialist
-    exam_domain: Data 360 Fundamentals
-    product_area: Data 360
-    topic: Agentforce Data Library
-    priority: high
-    status: active
-    retrieved_date: 2026-06-28
-    release_relevance: current
-    authority: official
-    notes:
-      Official Salesforce Help source defining Agentforce Data Libraries and their role in grounding
-      trusted data for AI features.
-
-  - id: agentforce-data-library-setup
-    title: Setting Up Data Libraries
-    source_type: salesforce_help
-    source_url: https://help.salesforce.com/s/articleView?id=ai.data_library_setup.htm&language=en_US&type=5
-    certification: Agentforce Specialist
-    exam_domain: Data 360 Fundamentals
-    product_area: Data 360
-    topic: Data Library Setup
-    priority: high
-    status: active
-    retrieved_date: 2026-06-28
-    release_relevance: current
-    authority: official
-    notes:
-      Official Salesforce Help source explaining data library setup, supported data sources, Data
-      360 indexing, search indexes, retrievers, and the Answer Questions with Knowledge action.
-
-  - id: data-360-retrieve-data
-    title: Retrieve Data
-    source_type: salesforce_help
-    source_url: https://help.salesforce.com/s/articleView?id=data.c360_a_ai_retriever.htm&language=en_US&type=5
-    certification: Agentforce Specialist
-    exam_domain: Data 360 Fundamentals
-    product_area: Data 360
-    topic: Retrievers
-    priority: high
-    status: active
-    retrieved_date: 2026-06-28
-    release_relevance: current
-    authority: official
-    notes:
-      Official Salesforce Help source explaining that retrievers search and return relevant data
-      from search indexes.
-
-  - id: salesforce-spring-26-release-notes-index
-    title: Salesforce Spring '26 Release Notes Index
-    source_type: release_notes
-    source_url: https://help.salesforce.com/s/articleView?id=release-notes.salesforce_release_notes.htm&language=en_US&release=260&type=5
-    certification: Agentforce Specialist
-    exam_domain: Release Currency
-    product_area: Salesforce Platform
-    topic: Spring 2026 Release Notes Index
-    priority: medium
-    status: active
-    retrieved_date: "2026-06-28"
-    release_relevance: current
-    authority: official
-    notes:
-      Official Spring '26 release notes index used as a release-currency control source, not as a primary concept source.
+- id: agentforce-specialist-exam-guide-spring-26
+  title: Salesforce Certified Agentforce Specialist Exam Guide Spring 2026
+  source_type: exam_guide
+  source_url: https://help.salesforce.com/s/articleView?id=005298924&type=1
+  certification: Agentforce Specialist
+  exam_domain: Exam Overview
+  product_area: Agentforce
+  topic: Certification Exam Guide
+  priority: high
+  status: active
+  retrieved_date: 2026-06-27
+  release_relevance: current
+  authority: official
+  notes: Primary control document for Spring '26 Agentforce Specialist exam scope,
+    domain weights, and source planning.
+- id: agentforce-data-library-concept
+  title: What Are Data Libraries?
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.data_library_concept.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Data 360 Fundamentals
+  product_area: Data 360
+  topic: Agentforce Data Library
+  priority: high
+  status: active
+  retrieved_date: 2026-06-28
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source defining Agentforce Data Libraries and their
+    role in grounding trusted data for AI features.
+- id: agentforce-data-library-setup
+  title: Setting Up Data Libraries
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.data_library_setup.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Data 360 Fundamentals
+  product_area: Data 360
+  topic: Data Library Setup
+  priority: high
+  status: active
+  retrieved_date: 2026-06-28
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining data library setup, supported
+    data sources, Data 360 indexing, search indexes, retrievers, and the Answer Questions
+    with Knowledge action.
+- id: data-360-retrieve-data
+  title: Retrieve Data
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=data.c360_a_ai_retriever.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Data 360 Fundamentals
+  product_area: Data 360
+  topic: Retrievers
+  priority: high
+  status: active
+  retrieved_date: 2026-06-28
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining that retrievers search and return
+    relevant data from search indexes.
+- id: salesforce-spring-26-release-notes-index
+  title: Salesforce Spring '26 Release Notes Index
+  source_type: release_notes
+  source_url: https://help.salesforce.com/s/articleView?id=release-notes.salesforce_release_notes.htm&language=en_US&release=260&type=5
+  certification: Agentforce Specialist
+  exam_domain: Release Currency
+  product_area: Salesforce Platform
+  topic: Spring 2026 Release Notes Index
+  priority: medium
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Spring '26 release notes index used as a release-currency control
+    source, not as a primary concept source.
+- id: data-360-hybrid-search-index
+  title: Create a Hybrid Search Index with Advanced Setup
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=data.c360_a_hybridsearch_index_create.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Data 360 Fundamentals
+  product_area: Data 360
+  topic: Hybrid Search Index
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining hybrid search index creation,
+    semantic chunks, searchable vectors, vector indexes, and keyword indexes.
