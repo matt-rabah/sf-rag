@@ -1,841 +1,973 @@
 sources:
-- id: agentforce-specialist-exam-guide-spring-26
-  title: Salesforce Certified Agentforce Specialist Exam Guide Spring 2026
-  source_type: exam_guide
-  source_url: https://help.salesforce.com/s/articleView?id=005298924&type=1
-  certification: Agentforce Specialist
-  exam_domain: Exam Overview
-  product_area: Agentforce
-  topic: Certification Exam Guide
-  priority: high
-  status: active
-  retrieved_date: 2026-06-27
-  release_relevance: current
-  authority: official
-  notes: Primary control document for Spring '26 Agentforce Specialist exam scope, domain weights, and source planning.
+  - id: agentforce-specialist-exam-guide-spring-26
+    title: Salesforce Certified Agentforce Specialist Exam Guide Spring 2026
+    source_type: exam_guide
+    source_url: https://help.salesforce.com/s/articleView?id=005298924&type=1
+    certification: Agentforce Specialist
+    exam_domain: Exam Overview
+    product_area: Agentforce
+    topic: Certification Exam Guide
+    priority: high
+    status: active
+    retrieved_date: 2026-06-27
+    release_relevance: current
+    authority: official
+    notes:
+      Primary control document for Spring '26 Agentforce Specialist exam scope, domain weights, and
+      source planning.
 
-- id: agentforce-data-library-concept
-  title: What Are Data Libraries?
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.data_library_concept.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Data 360 Fundamentals
-  product_area: Data 360
-  topic: Agentforce Data Library
-  priority: high
-  status: active
-  retrieved_date: 2026-06-28
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source defining Agentforce Data Libraries and their role in grounding trusted data for AI features.
+  - id: agentforce-data-library-concept
+    title: What Are Data Libraries?
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.data_library_concept.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Data 360 Fundamentals
+    product_area: Data 360
+    topic: Agentforce Data Library
+    priority: high
+    status: active
+    retrieved_date: 2026-06-28
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source defining Agentforce Data Libraries and their role in grounding
+      trusted data for AI features.
 
-- id: agentforce-data-library-setup
-  title: Setting Up Data Libraries
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.data_library_setup.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Data 360 Fundamentals
-  product_area: Data 360
-  topic: Data Library Setup
-  priority: high
-  status: active
-  retrieved_date: 2026-06-28
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining data library setup, supported data sources, Data 360 indexing, search indexes, retrievers, and the Answer Questions with Knowledge action.
+  - id: agentforce-data-library-setup
+    title: Setting Up Data Libraries
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.data_library_setup.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Data 360 Fundamentals
+    product_area: Data 360
+    topic: Data Library Setup
+    priority: high
+    status: active
+    retrieved_date: 2026-06-28
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining data library setup, supported data sources, Data
+      360 indexing, search indexes, retrievers, and the Answer Questions with Knowledge action.
 
-- id: data-360-retrieve-data
-  title: Retrieve Data
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=data.c360_a_ai_retriever.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Data 360 Fundamentals
-  product_area: Data 360
-  topic: Retrievers
-  priority: high
-  status: active
-  retrieved_date: 2026-06-28
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining that retrievers search and return relevant data from search indexes.
+  - id: data-360-retrieve-data
+    title: Retrieve Data
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=data.c360_a_ai_retriever.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Data 360 Fundamentals
+    product_area: Data 360
+    topic: Retrievers
+    priority: high
+    status: active
+    retrieved_date: 2026-06-28
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining that retrievers search and return relevant data
+      from search indexes.
 
-- id: salesforce-spring-26-release-notes-index
-  title: Salesforce Spring '26 Release Notes Index
-  source_type: release_notes
-  source_url: https://help.salesforce.com/s/articleView?id=release-notes.salesforce_release_notes.htm&language=en_US&release=260&type=5
-  certification: Agentforce Specialist
-  exam_domain: Release Currency
-  product_area: Salesforce Platform
-  topic: Spring 2026 Release Notes Index
-  priority: medium
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Spring '26 release notes index used as a release-currency control source, not as a primary concept source.
+  - id: salesforce-spring-26-release-notes-index
+    title: Salesforce Spring '26 Release Notes Index
+    source_type: release_notes
+    source_url: https://help.salesforce.com/s/articleView?id=release-notes.salesforce_release_notes.htm&language=en_US&release=260&type=5
+    certification: Agentforce Specialist
+    exam_domain: Release Currency
+    product_area: Salesforce Platform
+    topic: Spring 2026 Release Notes Index
+    priority: medium
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Spring '26 release notes index used as a release-currency control source, not as a
+      primary concept source.
 
-- id: data-360-hybrid-search-index
-  title: Create a Hybrid Search Index with Advanced Setup
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=data.c360_a_hybridsearch_index_create.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Data 360 Fundamentals
-  product_area: Data 360
-  topic: Hybrid Search Index
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining hybrid search index creation, semantic chunks, searchable vectors, vector indexes, and keyword indexes.
+  - id: data-360-hybrid-search-index
+    title: Create a Hybrid Search Index with Advanced Setup
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=data.c360_a_hybridsearch_index_create.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Data 360 Fundamentals
+    product_area: Data 360
+    topic: Hybrid Search Index
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining hybrid search index creation, semantic chunks,
+      searchable vectors, vector indexes, and keyword indexes.
 
-- id: data-360-chunk-index-data-model-objects
-  title: Chunk and Index Data Model Objects
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=data.c360_a_search_index_chunk_index_dmo.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Data 360 Fundamentals
-  product_area: Data 360
-  topic: Chunk and Index Data Model Objects
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining chunk data model objects and index data model objects created by search index configurations.
+  - id: data-360-chunk-index-data-model-objects
+    title: Chunk and Index Data Model Objects
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=data.c360_a_search_index_chunk_index_dmo.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Data 360 Fundamentals
+    product_area: Data 360
+    topic: Chunk and Index Data Model Objects
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining chunk data model objects and index data model
+      objects created by search index configurations.
 
-- id: agentforce-answer-questions-with-knowledge
-  title: Agentforce Platform | Answer Questions with Knowledge
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.copilot_actions_ref_answer_questions_with_knowledge.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: AI Agents
-  product_area: Agentforce Platform
-  topic: Answer Questions with Knowledge
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining the Answer Questions with Knowledge action used by Agentforce to answer user questions from relevant knowledge articles and uploaded files.
+  - id: agentforce-answer-questions-with-knowledge
+    title: Agentforce Platform | Answer Questions with Knowledge
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.copilot_actions_ref_answer_questions_with_knowledge.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: AI Agents
+    product_area: Agentforce Platform
+    topic: Answer Questions with Knowledge
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining the Answer Questions with Knowledge action used by
+      Agentforce to answer user questions from relevant knowledge articles and uploaded files.
 
-- id: agentforce-subagents-actions-instructions
-  title: Subagents, Actions, and Instructions in Agentforce
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.copilot_topics.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: AI Agents
-  product_area: Agentforce Platform
-  topic: Subagents Actions Instructions
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining that subagents contain actions and instructions, and that actions are the tools agents use to perform work.
+  - id: agentforce-subagents-actions-instructions
+    title: Subagents, Actions, and Instructions in Agentforce
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.copilot_topics.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: AI Agents
+    product_area: Agentforce Platform
+    topic: Subagents Actions Instructions
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining that subagents contain actions and instructions,
+      and that actions are the tools agents use to perform work.
 
-- id: agentforce-agent-actions
-  title: Agent Actions
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.copilot_actions.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: AI Agents
-  product_area: Agentforce Platform
-  topic: Agent Actions
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining standard and custom agent actions.
+  - id: agentforce-agent-actions
+    title: Agent Actions
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.copilot_actions.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: AI Agents
+    product_area: Agentforce Platform
+    topic: Agent Actions
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes: Official Salesforce Help source explaining standard and custom agent actions.
 
-- id: agentforce-create-custom-action
-  title: Create a Custom Action
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_actions_custom.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: AI Agents
-  product_area: Agentforce Platform
-  topic: Custom Agent Actions
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining custom agent actions and the Salesforce functionality they can reference, including flows, Apex, external services, MuleSoft APIs, and prompt templates.
+  - id: agentforce-create-custom-action
+    title: Create a Custom Action
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.agent_actions_custom.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: AI Agents
+    product_area: Agentforce Platform
+    topic: Custom Agent Actions
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining custom agent actions and the Salesforce
+      functionality they can reference, including flows, Apex, external services, MuleSoft APIs, and
+      prompt templates.
 
-- id: agentforce-action-instructions-best-practices
-  title: Best Practices for Agent Action Instructions
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.copilot_actions_instructions.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: AI Agents
-  product_area: Agentforce Platform
-  topic: Agent Action Instructions
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining best practices for agent action instructions, including what an action does and when an agent should use it.
+  - id: agentforce-action-instructions-best-practices
+    title: Best Practices for Agent Action Instructions
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.copilot_actions_instructions.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: AI Agents
+    product_area: Agentforce Platform
+    topic: Agent Action Instructions
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining best practices for agent action instructions,
+      including what an action does and when an agent should use it.
 
-- id: agentforce-builder-variables
-  title: Create Variables in Agentforce Builder
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_builder_variables_create.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: AI Agents
-  product_area: Agentforce Platform
-  topic: Agentforce Builder Variables
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining how variables are created from action outputs and assigned to action inputs in Agentforce Builder.
+  - id: agentforce-builder-variables
+    title: Create Variables in Agentforce Builder
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.agent_builder_variables_create.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: AI Agents
+    product_area: Agentforce Platform
+    topic: Agentforce Builder Variables
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining how variables are created from action outputs and
+      assigned to action inputs in Agentforce Builder.
 
-- id: agentforce-preview-and-test-builder
-  title: Preview and Test in Agentforce Builder
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_preview_and_test.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Testing, Deployment, & Maintenance
-  product_area: Agentforce Platform
-  topic: Preview and Test in Agentforce Builder
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining manual preview testing in Agentforce Builder, including subagent selection, action execution, reasoning and the Interaction Summary panel.
+  - id: agentforce-preview-and-test-builder
+    title: Preview and Test in Agentforce Builder
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.agent_preview_and_test.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Testing, Deployment, & Maintenance
+    product_area: Agentforce Platform
+    topic: Preview and Test in Agentforce Builder
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining manual preview testing in Agentforce Builder,
+      including subagent selection, action execution, reasoning and the Interaction Summary panel.
 
-- id: agentforce-testing-center
-  title: Agentforce Testing Center
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_testing_center.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Testing, Deployment, & Maintenance
-  product_area: Agentforce Platform
-  topic: Agentforce Testing Center
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining Agentforce Testing Center, including generated test cases from subagents and actions, Q&A tests from knowledge content, uploaded custom scenarios, and the need to test non-deterministic AI agents across many scenarios.
+  - id: agentforce-testing-center
+    title: Agentforce Testing Center
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.agent_testing_center.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Testing, Deployment, & Maintenance
+    product_area: Agentforce Platform
+    topic: Agentforce Testing Center
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining Agentforce Testing Center, including generated test
+      cases from subagents and actions, Q&A tests from knowledge content, uploaded custom scenarios,
+      and the need to test non-deterministic AI agents across many scenarios.
 
-- id: agentforce-agent-versioning-lifecycle
-  title: Versioning and Editing Agents
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_versions_lifecycle.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Testing, Deployment, & Maintenance
-  product_area: Agentforce Platform
-  topic: Agent Versioning Lifecycle
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining agent draft versions, modifying and testing changes, activating agents, and creating new versions during the agent lifecycle.
+  - id: agentforce-agent-versioning-lifecycle
+    title: Versioning and Editing Agents
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.agent_versions_lifecycle.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Testing, Deployment, & Maintenance
+    product_area: Agentforce Platform
+    topic: Agent Versioning Lifecycle
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining agent draft versions, modifying and testing
+      changes, activating agents, and creating new versions during the agent lifecycle.
 
-- id: agentforce-deploy-agent-to-channels
-  title: Deploy Your Agent to Channels
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_parent_deploy.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Testing, Deployment, & Maintenance
-  product_area: Agentforce Platform
-  topic: Agent Deployment Channels
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining that agents are activated and deployed to channels to make them available to customers or employees.
+  - id: agentforce-deploy-agent-to-channels
+    title: Deploy Your Agent to Channels
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.agent_parent_deploy.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Testing, Deployment, & Maintenance
+    product_area: Agentforce Platform
+    topic: Agent Deployment Channels
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining that agents are activated and deployed to channels
+      to make them available to customers or employees.
 
-- id: agentforce-session-tracing
-  title: Agentforce Session Tracing
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_session_trace.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Governance & Observability
-  product_area: Agentforce Platform
-  topic: Agentforce Session Tracing
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining Agentforce session tracing for observing, monitoring, investigating, and troubleshooting agent sessions.
+  - id: agentforce-session-tracing
+    title: Agentforce Session Tracing
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_session_trace.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Governance & Observability
+    product_area: Agentforce Platform
+    topic: Agentforce Session Tracing
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining Agentforce session tracing for observing,
+      monitoring, investigating, and troubleshooting agent sessions.
 
-- id: einstein-trust-layer
-  title: Einstein Trust Layer
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_layer.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Governance & Observability
-  product_area: Agentforce Platform
-  topic: Einstein Trust Layer
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining Einstein Trust Layer protections including sensitive data masking, toxicity scoring, audit trail, and Data 360 storage.
+  - id: einstein-trust-layer
+    title: Einstein Trust Layer
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_layer.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Governance & Observability
+    product_area: Agentforce Platform
+    topic: Einstein Trust Layer
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining Einstein Trust Layer protections including
+      sensitive data masking, toxicity scoring, audit trail, and Data 360 storage.
 
-- id: agentforce-analytics-reports
-  title: Agentforce Analytics Reports
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.copilot_reports_dashboards.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Governance & Observability
-  product_area: Agentforce Platform
-  topic: Agentforce Analytics Reports
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining Agentforce Analytics reports, Data 360 reporting, agent usage, success, and adoption insights.
+  - id: agentforce-analytics-reports
+    title: Agentforce Analytics Reports
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.copilot_reports_dashboards.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Governance & Observability
+    product_area: Agentforce Platform
+    topic: Agentforce Analytics Reports
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining Agentforce Analytics reports, Data 360 reporting,
+      agent usage, success, and adoption insights.
 
-- id: prompt-builder-overview
-  title: Prompt Builder
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_about.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Prompt Engineering
-  product_area: Agentforce Platform
-  topic: Prompt Builder
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining Prompt Builder, prompt templates, testing, revision, customization, management, and grounding with CRM data.
+  - id: prompt-builder-overview
+    title: Prompt Builder
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_about.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Prompt Engineering
+    product_area: Agentforce Platform
+    topic: Prompt Builder
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining Prompt Builder, prompt templates, testing,
+      revision, customization, management, and grounding with CRM data.
 
-- id: prompt-builder-key-concepts
-  title: Prompt Builder Key Concepts
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_key_concepts.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Prompt Engineering
-  product_area: Agentforce Platform
-  topic: Prompt Builder Key Concepts
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source for Prompt Builder vocabulary and core concepts, including prompt templates, merge fields, resources, and template grounding.
+  - id: prompt-builder-key-concepts
+    title: Prompt Builder Key Concepts
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_key_concepts.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Prompt Engineering
+    product_area: Agentforce Platform
+    topic: Prompt Builder Key Concepts
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source for Prompt Builder vocabulary and core concepts, including
+      prompt templates, merge fields, resources, and template grounding.
 
-- id: prompt-builder-template-types
-  title: Prompt Template Types
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_standard_template_types.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Prompt Engineering
-  product_area: Agentforce Platform
-  topic: Prompt Template Types
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining Prompt Builder template types, including Sales Email, Field Generation, Record Summary, Flex, and Grounded Service Replies.
+  - id: prompt-builder-template-types
+    title: Prompt Template Types
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_standard_template_types.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Prompt Engineering
+    product_area: Agentforce Platform
+    topic: Prompt Template Types
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining Prompt Builder template types, including Sales
+      Email, Field Generation, Record Summary, Flex, and Grounded Service Replies.
 
-- id: prompt-builder-ground-salesforce-resources
-  title: Ground Prompt Templates with Salesforce Resources
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_ground_template.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Prompt Engineering
-  product_area: Agentforce Platform
-  topic: Prompt Template Grounding
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining how Prompt Builder dynamically grounds prompt templates with CRM data using merge fields that reference record fields, flows, related lists, and Apex.
+  - id: prompt-builder-ground-salesforce-resources
+    title: Ground Prompt Templates with Salesforce Resources
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_ground_template.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Prompt Engineering
+    product_area: Agentforce Platform
+    topic: Prompt Template Grounding
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining how Prompt Builder dynamically grounds prompt
+      templates with CRM data using merge fields that reference record fields, flows, related lists,
+      and Apex.
 
-- id: prompt-builder-preview-resolved-prompt
-  title: Preview a Resolved Prompt
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_preview_resolved_prompt.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Prompt Engineering
-  product_area: Agentforce Platform
-  topic: Prompt Template Testing and Preview
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining how to preview resolved prompts with test data, grounding data, Preview Settings, Display Resolution, and iterative prompt revision before sending to the LLM.
+  - id: prompt-builder-preview-resolved-prompt
+    title: Preview a Resolved Prompt
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_preview_resolved_prompt.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Prompt Engineering
+    product_area: Agentforce Platform
+    topic: Prompt Template Testing and Preview
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining how to preview resolved prompts with test data,
+      grounding data, Preview Settings, Display Resolution, and iterative prompt revision before
+      sending to the LLM.
 
-- id: prompt-builder-activate-deactivate-templates
-  title: Activate and Deactivate Prompt Templates
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_activate_deactivate_templates.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Prompt Engineering
-  product_area: Agentforce Platform
-  topic: Prompt Template Activation
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining prompt template activation, deactivation, active versions, and user availability.
+  - id: prompt-builder-activate-deactivate-templates
+    title: Activate and Deactivate Prompt Templates
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_activate_deactivate_templates.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Prompt Engineering
+    product_area: Agentforce Platform
+    topic: Prompt Template Activation
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining prompt template activation, deactivation, active
+      versions, and user availability.
 
-- id: prompt-builder-configure-action
-  title: Configure an Action in a Prompt Template
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_configure_action.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Prompt Engineering
-  product_area: Agentforce Platform
-  topic: Prompt Template Actions
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining how Prompt Builder can configure and add existing actions such as Flows, Apex, and Retrievers directly to a prompt template.
+  - id: prompt-builder-configure-action
+    title: Configure an Action in a Prompt Template
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_configure_action.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Prompt Engineering
+    product_area: Agentforce Platform
+    topic: Prompt Template Actions
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining how Prompt Builder can configure and add existing
+      actions such as Flows, Apex, and Retrievers directly to a prompt template.
 
-- id: prompt-builder-use-multiple-versions
-  title: Use Multiple Versions of a Prompt Template
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_use_multiple_versions.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Prompt Engineering
-  product_area: Agentforce Platform
-  topic: Prompt Template Versioning
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining how to create and use multiple prompt template versions in Prompt Builder to compare prompt constructions and results.
+  - id: prompt-builder-use-multiple-versions
+    title: Use Multiple Versions of a Prompt Template
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_use_multiple_versions.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Prompt Engineering
+    product_area: Agentforce Platform
+    topic: Prompt Template Versioning
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining how to create and use multiple prompt template
+      versions in Prompt Builder to compare prompt constructions and results.
 
-- id: prompt-builder-best-practices
-  title: Best Practices for Building Prompt Templates
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_best_practices.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Prompt Engineering
-  product_area: Agentforce Platform
-  topic: Prompt Template Best Practices
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining best practices for building prompt templates, including clear natural language, concise instructions, avoiding jargon, and improving prompt quality.
+  - id: prompt-builder-best-practices
+    title: Best Practices for Building Prompt Templates
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_best_practices.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Prompt Engineering
+    product_area: Agentforce Platform
+    topic: Prompt Template Best Practices
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining best practices for building prompt templates,
+      including clear natural language, concise instructions, avoiding jargon, and improving prompt
+      quality.
 
-- id: prompt-builder-template-ingredients
-  title: Ingredients of a Prompt Template
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_template_ingredients.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Prompt Engineering
-  product_area: Agentforce Platform
-  topic: Prompt Template Ingredients
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining the ingredients of an effective prompt template, including reusable and scalable prompt design.
+  - id: prompt-builder-template-ingredients
+    title: Ingredients of a Prompt Template
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_template_ingredients.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Prompt Engineering
+    product_area: Agentforce Platform
+    topic: Prompt Template Ingredients
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining the ingredients of an effective prompt template,
+      including reusable and scalable prompt design.
 
-- id: prompt-builder-create-flex-template
-  title: Create a Flex Prompt Template
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_create_flex_prompt_template.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Prompt Engineering
-  product_area: Agentforce Platform
-  topic: Flex Prompt Templates
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining how to create a Flex prompt template and use flexible inputs for reusable prompt use cases.
+  - id: prompt-builder-create-flex-template
+    title: Create a Flex Prompt Template
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_create_flex_prompt_template.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Prompt Engineering
+    product_area: Agentforce Platform
+    topic: Flex Prompt Templates
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining how to create a Flex prompt template and use
+      flexible inputs for reusable prompt use cases.
 
-- id: prompt-builder-answer-questions-with-knowledge-template
-  title: Create an Answer Questions with Knowledge Prompt Template
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_answer_questions_with_knowledge.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Prompt Engineering
-  product_area: Agentforce Platform
-  topic: Answer Questions with Knowledge Prompt Template
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining how Answer Questions with Knowledge prompt templates use Agentforce Data Libraries, standard prompt template structure, LLM instructions, data resources, and user query inputs.
+  - id: prompt-builder-answer-questions-with-knowledge-template
+    title: Create an Answer Questions with Knowledge Prompt Template
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_answer_questions_with_knowledge.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Prompt Engineering
+    product_area: Agentforce Platform
+    topic: Answer Questions with Knowledge Prompt Template
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining how Answer Questions with Knowledge prompt
+      templates use Agentforce Data Libraries, standard prompt template structure, LLM instructions,
+      data resources, and user query inputs.
 
-- id: agentforce-building-blocks-of-agents
-  title: The Building Blocks of Agents
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.copilot_building_blocks.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: AI Agents
-  product_area: Agentforce Platform
-  topic: Agent Building Blocks
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining the key components of agents, including subagents and actions, data, connections and channels, and the reasoning engine.
+  - id: agentforce-building-blocks-of-agents
+    title: The Building Blocks of Agents
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.copilot_building_blocks.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: AI Agents
+    product_area: Agentforce Platform
+    topic: Agent Building Blocks
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining the key components of agents, including subagents
+      and actions, data, connections and channels, and the reasoning engine.
 
-- id: agentforce-create-agent
-  title: Create an Agent
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_setup_create.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: AI Agents
-  product_area: Agentforce Platform
-  topic: Create an Agent
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining ways to create agents, including creating an agent from a template with relevant subagents, actions, default system messages, variables, filters, and required permissions.
+  - id: agentforce-create-agent
+    title: Create an Agent
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.agent_setup_create.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: AI Agents
+    product_area: Agentforce Platform
+    topic: Create an Agent
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining ways to create agents, including creating an agent
+      from a template with relevant subagents, actions, default system messages, variables, filters,
+      and required permissions.
 
-- id: agentforce-filters-subagents-actions
-  title: Create a Filter to Control Access to Subagents and Actions
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_asset_filters.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: AI Agents
-  product_area: Agentforce Platform
-  topic: Agent Filters
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining filters that control access to subagents and actions based on variables, including authentication-related filters for customer channels.
+  - id: agentforce-filters-subagents-actions
+    title: Create a Filter to Control Access to Subagents and Actions
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.agent_asset_filters.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: AI Agents
+    product_area: Agentforce Platform
+    topic: Agent Filters
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining filters that control access to subagents and
+      actions based on variables, including authentication-related filters for customer channels.
 
-- id: agentforce-manage-employee-agent-access
-  title: Manage Employee Agent Access
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_manage_aea_access.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: AI Agents
-  product_area: Agentforce Platform
-  topic: Employee Agent Access
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining how to give users access to an Agentforce Employee agent by adding the agent to a permission set or profile in Setup.
+  - id: agentforce-manage-employee-agent-access
+    title: Manage Employee Agent Access
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.agent_manage_aea_access.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: AI Agents
+    product_area: Agentforce Platform
+    topic: Employee Agent Access
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining how to give users access to an Agentforce Employee
+      agent by adding the agent to a permission set or profile in Setup.
 
-- id: agentforce-agent-user-permissions-best-practices
-  title: Best Practices for Agent User Permissions
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_user.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: AI Agents
-  product_area: Agentforce Platform
-  topic: Agent User Permissions
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source for best practices around agent user permissions and secure agent access to data and actions.
+  - id: agentforce-agent-user-permissions-best-practices
+    title: Best Practices for Agent User Permissions
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.agent_user.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: AI Agents
+    product_area: Agentforce Platform
+    topic: Agent User Permissions
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source for best practices around agent user permissions and secure
+      agent access to data and actions.
 
-- id: agentforce-enterprise-agentic-architecture
-  title: Enterprise Agentic Architecture and Design Patterns
-  source_type: developer_docs
-  source_url: https://architect.salesforce.com/docs/architect/fundamentals/guide/enterprise-agentic-architecture.html
-  certification: Agentforce Specialist
-  exam_domain: Multi-Agent Orchestration
-  product_area: Agentforce Platform
-  topic: Enterprise Agentic Architecture
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Architects source defining SOMA and describing supervisor/specialist agent orchestration, shared governance and data, and MCP-wrapper patterns for external functionality.
+  - id: agentforce-enterprise-agentic-architecture
+    title: Enterprise Agentic Architecture and Design Patterns
+    source_type: developer_docs
+    source_url: https://architect.salesforce.com/docs/architect/fundamentals/guide/enterprise-agentic-architecture.html
+    certification: Agentforce Specialist
+    exam_domain: Multi-Agent Orchestration
+    product_area: Agentforce Platform
+    topic: Enterprise Agentic Architecture
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Architects source defining SOMA and describing supervisor/specialist agent
+      orchestration, shared governance and data, and MCP-wrapper patterns for external
+      functionality.
 
-- id: agentforce-agent2agent-protocol
-  title: Agent2Agent Protocol
-  source_type: developer_docs
-  source_url: https://www.salesforce.com/agentforce/ai-agents/agent2agent-protocol/
-  certification: Agentforce Specialist
-  exam_domain: Multi-Agent Orchestration
-  product_area: Agentforce Platform
-  topic: Agent2Agent Protocol
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce source explaining Agent2Agent, or A2A, as an open standard for secure communication, collaboration, context sharing, and task delegation between AI agents from different platforms.
+  - id: agentforce-agent2agent-protocol
+    title: Agent2Agent Protocol
+    source_type: developer_docs
+    source_url: https://www.salesforce.com/agentforce/ai-agents/agent2agent-protocol/
+    certification: Agentforce Specialist
+    exam_domain: Multi-Agent Orchestration
+    product_area: Agentforce Platform
+    topic: Agent2Agent Protocol
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce source explaining Agent2Agent, or A2A, as an open standard for secure
+      communication, collaboration, context sharing, and task delegation between AI agents from
+      different platforms.
 
-- id: agentforce-mcp-solutions
-  title: MCP Solutions
-  source_type: developer_docs
-  source_url: https://developer.salesforce.com/docs/ai/agentforce/guide/mcp.html
-  certification: Agentforce Specialist
-  exam_domain: Multi-Agent Orchestration
-  product_area: Agentforce Platform
-  topic: Model Context Protocol
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Agentforce Developer Guide source explaining MCP solutions, MCP servers, secure request processing, and returning data or action results to an AI application.
+  - id: agentforce-mcp-solutions
+    title: MCP Solutions
+    source_type: developer_docs
+    source_url: https://developer.salesforce.com/docs/ai/agentforce/guide/mcp.html
+    certification: Agentforce Specialist
+    exam_domain: Multi-Agent Orchestration
+    product_area: Agentforce Platform
+    topic: Model Context Protocol
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Agentforce Developer Guide source explaining MCP solutions, MCP servers,
+      secure request processing, and returning data or action results to an AI application.
 
-- id: agentforce-multi-agent-orchestration-beta-release-note
-  title: Orchestrate Other Agents
-  source_type: release_notes
-  source_url: https://help.salesforce.com/s/articleView?id=release-notes.rn_agentforce_orchestrate.htm&language=en_US&release=260&type=5
-  certification: Agentforce Specialist
-  exam_domain: Multi-Agent Orchestration
-  product_area: Agentforce Platform
-  topic: Multi-Agent Orchestration Beta
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Spring '26 release note explaining Multi-Agent Orchestration for Agentforce Beta, connecting agents with specialized agents in the same Salesforce org, and using connected subagents as a single unified point of contact.
+  - id: agentforce-multi-agent-orchestration-beta-release-note
+    title: Orchestrate Other Agents
+    source_type: release_notes
+    source_url: https://help.salesforce.com/s/articleView?id=release-notes.rn_agentforce_orchestrate.htm&language=en_US&release=260&type=5
+    certification: Agentforce Specialist
+    exam_domain: Multi-Agent Orchestration
+    product_area: Agentforce Platform
+    topic: Multi-Agent Orchestration Beta
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Spring '26 release note explaining Multi-Agent Orchestration for Agentforce Beta,
+      connecting agents with specialized agents in the same Salesforce org, and using connected
+      subagents as a single unified point of contact.
 
-- id: agentforce-subagent-classification-routing
-  title: Subagent Classification and Routing
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_topics_routing.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: AI Agents
-  product_area: Agentforce Platform
-  topic: Subagent Classification and Routing
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining Agent Router, subagent classification, and how an agent selects the most relevant subagent based on user intent and available jobs.
+  - id: agentforce-subagent-classification-routing
+    title: Subagent Classification and Routing
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.agent_topics_routing.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: AI Agents
+    product_area: Agentforce Platform
+    topic: Subagent Classification and Routing
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining Agent Router, subagent classification, and how an
+      agent selects the most relevant subagent based on user intent and available jobs.
 
-- id: agentforce-agent-types-considerations
-  title: Agent Types and Considerations
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_setup_explore_types.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: AI Agents
-  product_area: Agentforce Platform
-  topic: Agent Types and Considerations
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining Agentforce agent types, default templates for clouds and common use cases, and consideration pages for Service Agent, Employee Agent, and Agentforce Default.
+  - id: agentforce-agent-types-considerations
+    title: Agent Types and Considerations
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.agent_setup_explore_types.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: AI Agents
+    product_area: Agentforce Platform
+    topic: Agent Types and Considerations
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining Agentforce agent types, default templates for
+      clouds and common use cases, and consideration pages for Service Agent, Employee Agent, and
+      Agentforce Default.
 
-- id: einstein-trust-layer-response-journey
-  title: 'Einstein Trust Layer: Response Journey'
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_arch2.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Governance & Observability
-  product_area: Einstein Trust Layer
-  topic: Trust Layer Response Journey
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining the Einstein Trust Layer response journey, audit trail contents, toxicity scores, masked prompts, demasked output, and Data 360 audit and feedback storage.
+  - id: einstein-trust-layer-response-journey
+    title: "Einstein Trust Layer: Response Journey"
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_arch2.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Governance & Observability
+    product_area: Einstein Trust Layer
+    topic: Trust Layer Response Journey
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining the Einstein Trust Layer response journey, audit
+      trail contents, toxicity scores, masked prompts, demasked output, and Data 360 audit and
+      feedback storage.
 
-- id: einstein-trust-layer-llm-data-masking
-  title: Large Language Model Data Masking
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_mask_data.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Governance & Observability
-  product_area: Einstein Trust Layer
-  topic: LLM Data Masking
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining how Einstein Trust Layer identifies and masks sensitive information in prompts before sending them to the LLM, including protection for personally identifiable information.
+  - id: einstein-trust-layer-llm-data-masking
+    title: Large Language Model Data Masking
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_mask_data.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Governance & Observability
+    product_area: Einstein Trust Layer
+    topic: LLM Data Masking
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining how Einstein Trust Layer identifies and masks
+      sensitive information in prompts before sending them to the LLM, including protection for
+      personally identifiable information.
 
-- id: einstein-trust-layer-toxicity-detection
-  title: Toxicity Detection
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_toxicity_detection.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Governance & Observability
-  product_area: Einstein Trust Layer
-  topic: Toxicity Detection
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining Einstein Trust Layer toxicity detection for identifying and flagging toxic content in prompts and responses.
+  - id: einstein-trust-layer-toxicity-detection
+    title: Toxicity Detection
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_toxicity_detection.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Governance & Observability
+    product_area: Einstein Trust Layer
+    topic: Toxicity Detection
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining Einstein Trust Layer toxicity detection for
+      identifying and flagging toxic content in prompts and responses.
 
-- id: einstein-audit-and-feedback-data
-  title: Einstein Audit and Feedback Data
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_feedback.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Governance & Observability
-  product_area: Einstein Trust Layer
-  topic: Audit and Feedback Data
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining how generative AI audit data, also known as audit trail, tracks Einstein Trust Layer functionality such as data masking and toxicity detection.
+  - id: einstein-audit-and-feedback-data
+    title: Einstein Audit and Feedback Data
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_feedback.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Governance & Observability
+    product_area: Einstein Trust Layer
+    topic: Audit and Feedback Data
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining how generative AI audit data, also known as audit
+      trail, tracks Einstein Trust Layer functionality such as data masking and toxicity detection.
 
-- id: agentforce-data-masking-limitations
-  title: Data Masking Limitations in Agentforce
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_trust_data_masking.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Governance & Observability
-  product_area: Agentforce Platform
-  topic: Data Masking Limitations
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining Agentforce data masking limitations, Trust Layer protections beyond data masking, and zero data retention for information sent to LLMs outside the Salesforce trust boundary.
+  - id: agentforce-data-masking-limitations
+    title: Data Masking Limitations in Agentforce
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.agent_trust_data_masking.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Governance & Observability
+    product_area: Agentforce Platform
+    topic: Data Masking Limitations
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining Agentforce data masking limitations, Trust Layer
+      protections beyond data masking, and zero data retention for information sent to LLMs outside
+      the Salesforce trust boundary.
 
+  - id: agentforce-agent-script
+    title: Agent Script
+    source_type: developer_docs
+    source_url: https://developer.salesforce.com/docs/ai/agentforce/guide/agent-script.html
+    certification: Agentforce Specialist
+    exam_domain: AI Agents
+    product_area: Agentforce Platform
+    topic: Agent Script
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Agentforce Developer Guide source explaining Agent Script, the language
+      for building agents in Agentforce Builder, combining natural language flexibility with
+      deterministic programmatic expressions, conditional logic, subagent transitions, action
+      chaining, and variables.
 
-- id: agentforce-agent-script
-  title: Agent Script
-  source_type: developer_docs
-  source_url: https://developer.salesforce.com/docs/ai/agentforce/guide/agent-script.html
-  certification: Agentforce Specialist
-  exam_domain: AI Agents
-  product_area: Agentforce Platform
-  topic: Agent Script
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Agentforce Developer Guide source explaining Agent Script, the language for building agents in Agentforce Builder, combining natural language flexibility with deterministic programmatic expressions, conditional logic, subagent transitions, action chaining, and variables.
+  - id: agentforce-new-builder-overview
+    title: Explore the New Agentforce Builder
+    source_type: trailhead
+    source_url: https://trailhead.salesforce.com/content/learn/modules/new-agentforce-builder-quick-look/explore-the-new-agentforce-builder
+    certification: Agentforce Specialist
+    exam_domain: AI Agents
+    product_area: Agentforce Platform
+    topic: New Agentforce Builder
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Trailhead source explaining the new Agentforce Builder highlights,
+      including more determinism from the upgraded Atlas reasoning engine, programmatic control with
+      Agent Script, built-in assistance, an improved file-based interface, and powerful agent
+      previews.
 
-- id: agentforce-new-builder-overview
-  title: Explore the New Agentforce Builder
-  source_type: trailhead
-  source_url: https://trailhead.salesforce.com/content/learn/modules/new-agentforce-builder-quick-look/explore-the-new-agentforce-builder
-  certification: Agentforce Specialist
-  exam_domain: AI Agents
-  product_area: Agentforce Platform
-  topic: New Agentforce Builder
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Trailhead source explaining the new Agentforce Builder highlights, including more determinism from the upgraded Atlas reasoning engine, programmatic control with Agent Script, built-in assistance, an improved file-based interface, and powerful agent previews.
+  - id: agentforce-builder-canvas-script-views
+    title: Canvas and Script Views in Agentforce Builder
+    source_type: trailhead
+    source_url: https://trailhead.salesforce.com/content/learn/modules/new-agentforce-builder-quick-look/explore-the-new-agentforce-builder
+    certification: Agentforce Specialist
+    exam_domain: AI Agents
+    product_area: Agentforce Platform
+    topic: Canvas and Script Views
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Trailhead source explaining Agentforce Builder components, including the
+      Explorer, Canvas view, Script view, the Canvas/Script toggle, the Preview panel, Commit
+      Version, and how Canvas and Script views stay in sync.
 
-- id: agentforce-builder-canvas-script-views
-  title: Canvas and Script Views in Agentforce Builder
-  source_type: trailhead
-  source_url: https://trailhead.salesforce.com/content/learn/modules/new-agentforce-builder-quick-look/explore-the-new-agentforce-builder
-  certification: Agentforce Specialist
-  exam_domain: AI Agents
-  product_area: Agentforce Platform
-  topic: Canvas and Script Views
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Trailhead source explaining Agentforce Builder components, including the Explorer, Canvas view, Script view, the Canvas/Script toggle, the Preview panel, Commit Version, and how Canvas and Script views stay in sync.
+  - id: agentforce-deploy-metadata-new-org
+    title: Use Metadata to Move an Agent to a New Org
+    source_type: developer_docs
+    source_url: https://developer.salesforce.com/docs/ai/agentforce/guide/agent-dx-deploy-metadata.html
+    certification: Agentforce Specialist
+    exam_domain: Testing, Deployment, & Maintenance
+    product_area: Agentforce Platform
+    topic: Agent Metadata Deployment
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Agentforce Developer Guide source explaining source and target org
+      prerequisites, metadata manifests, draft and committed agent representations, dependent
+      metadata, and target-org agent user assignment.
 
-- id: agentforce-deploy-metadata-new-org
-  title: Use Metadata to Move an Agent to a New Org
-  source_type: developer_docs
-  source_url: https://developer.salesforce.com/docs/ai/agentforce/guide/agent-dx-deploy-metadata.html
-  certification: Agentforce Specialist
-  exam_domain: Testing, Deployment, & Maintenance
-  product_area: Agentforce Platform
-  topic: Agent Metadata Deployment
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Agentforce Developer Guide source explaining source and target org prerequisites, metadata manifests, draft and committed agent representations, dependent metadata, and target-org agent user assignment.
+  - id: agentforce-metadata-structure
+    title: "Agent Metadata: A Shallow Dive"
+    source_type: developer_docs
+    source_url: https://developer.salesforce.com/docs/ai/agentforce/guide/agent-dx-metadata.html
+    certification: Agentforce Specialist
+    exam_domain: Testing, Deployment, & Maintenance
+    product_area: Agentforce Platform
+    topic: Agent Metadata Structure
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Agentforce Developer Guide source explaining the metadata components that
+      make up an agent, including AiAuthoringBundle, Bot, BotVersion, GenAiPlannerBundle,
+      GenAiPlugin, and GenAiFunction.
 
-- id: agentforce-metadata-structure
-  title: "Agent Metadata: A Shallow Dive"
-  source_type: developer_docs
-  source_url: https://developer.salesforce.com/docs/ai/agentforce/guide/agent-dx-metadata.html
-  certification: Agentforce Specialist
-  exam_domain: Testing, Deployment, & Maintenance
-  product_area: Agentforce Platform
-  topic: Agent Metadata Structure
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Agentforce Developer Guide source explaining the metadata components that make up an agent, including AiAuthoringBundle, Bot, BotVersion, GenAiPlannerBundle, GenAiPlugin, and GenAiFunction.
+  - id: agentforce-single-version-manifest
+    title: Manifest Defining a Single Agent Version
+    source_type: developer_docs
+    source_url: https://developer.salesforce.com/docs/ai/agentforce/guide/package-singleagent.html
+    certification: Agentforce Specialist
+    exam_domain: Testing, Deployment, & Maintenance
+    product_area: Agentforce Platform
+    topic: Single Agent Version Deployment
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Agentforce Developer Guide source explaining that a full agent must be
+      deployed before a specific BotVersion and that the manifest must include the version's
+      dependent metadata.
 
-- id: agentforce-single-version-manifest
-  title: Manifest Defining a Single Agent Version
-  source_type: developer_docs
-  source_url: https://developer.salesforce.com/docs/ai/agentforce/guide/package-singleagent.html
-  certification: Agentforce Specialist
-  exam_domain: Testing, Deployment, & Maintenance
-  product_area: Agentforce Platform
-  topic: Single Agent Version Deployment
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Agentforce Developer Guide source explaining that a full agent must be deployed before a specific BotVersion and that the manifest must include the version's dependent metadata.
+  - id: agentforce-generate-agent-template
+    title: agent generate template
+    source_type: developer_docs
+    source_url: https://developer.salesforce.com/docs/platform/salesforce-cli-reference/guide/cli_reference_agent_generate_template.html
+    certification: Agentforce Specialist
+    exam_domain: Testing, Deployment, & Maintenance
+    product_area: Agentforce Platform
+    topic: Agent Template Packaging
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce CLI reference explaining how to generate BotTemplate and
+      GenAiPlannerBundle metadata for second-generation managed packaging and the current Agent
+      Script limitation.
 
-- id: agentforce-generate-agent-template
-  title: agent generate template
-  source_type: developer_docs
-  source_url: https://developer.salesforce.com/docs/platform/salesforce-cli-reference/guide/cli_reference_agent_generate_template.html
-  certification: Agentforce Specialist
-  exam_domain: Testing, Deployment, & Maintenance
-  product_area: Agentforce Platform
-  topic: Agent Template Packaging
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce CLI reference explaining how to generate BotTemplate and GenAiPlannerBundle metadata for second-generation managed packaging and the current Agent Script limitation.
-
-- id: prompt-template-deployment-considerations
-  title: Deployment Considerations for Prompt Templates
-  source_type: salesforce_help
-  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_considerations_deployment.htm&language=en_US&type=5
-  certification: Agentforce Specialist
-  exam_domain: Testing, Deployment, & Maintenance
-  product_area: Prompt Builder
-  topic: Prompt Template Deployment
-  priority: high
-  status: active
-  retrieved_date: '2026-06-28'
-  release_relevance: current
-  authority: official
-  notes: Official Salesforce Help source explaining prompt-template package, change set, CLI, flow dependency, deployment ordering, and template-version considerations.
+  - id: prompt-template-deployment-considerations
+    title: Deployment Considerations for Prompt Templates
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_considerations_deployment.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Testing, Deployment, & Maintenance
+    product_area: Prompt Builder
+    topic: Prompt Template Deployment
+    priority: high
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Salesforce Help source explaining prompt-template package, change set, CLI, flow
+      dependency, deployment ordering, and template-version considerations.
