@@ -668,3 +668,19 @@ sources:
   notes: Official Salesforce Help source explaining Agentforce agent types, default
     templates for clouds and common use cases, and consideration pages for Service
     Agent, Employee Agent, and Agentforce Default.
+- id: einstein-trust-layer-response-journey
+  title: 'Einstein Trust Layer: Response Journey'
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_arch2.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Governance & Observability
+  product_area: Einstein Trust Layer
+  topic: Trust Layer Response Journey
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining the Einstein Trust Layer response
+    journey, audit trail contents, toxicity scores, masked prompts, demasked output,
+    and Data 360 audit and feedback storage.
