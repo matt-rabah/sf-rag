@@ -431,3 +431,19 @@ sources:
   notes: Official Salesforce Help source explaining how to create and use multiple
     prompt template versions in Prompt Builder to compare prompt constructions and
     results.
+- id: prompt-builder-best-practices
+  title: Best Practices for Building Prompt Templates
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_best_practices.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Prompt Engineering
+  product_area: Agentforce Platform
+  topic: Prompt Template Best Practices
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining best practices for building prompt
+    templates, including clear natural language, concise instructions, avoiding jargon,
+    and improving prompt quality.
