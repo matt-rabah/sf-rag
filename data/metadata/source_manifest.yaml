@@ -260,3 +260,18 @@ sources:
   authority: official
   notes: Official Salesforce Help source explaining that agents are activated and
     deployed to channels to make them available to customers or employees.
+- id: agentforce-session-tracing
+  title: Agentforce Session Tracing
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_session_trace.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Governance & Observability
+  product_area: Agentforce Platform
+  topic: Agentforce Session Tracing
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining Agentforce session tracing for
+    observing, monitoring, investigating, and troubleshooting agent sessions.
