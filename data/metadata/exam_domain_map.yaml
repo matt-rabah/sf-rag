@@ -1,0 +1,108 @@
+certification: Agentforce Specialist
+exam_version: Spring 2026
+source_id: agentforce-specialist-exam-guide-spring-26
+passing_score: 72
+question_count: 60
+time_limit_minutes: 105
+unscored_questions: up to 5
+domains:
+  - id: ai-agents
+    name: AI Agents
+    weight: 35
+    priority: 1
+    product_area: Agentforce
+    topics:
+      - Agent basics and building blocks
+      - Agent Script
+      - Canvas
+      - Script View
+      - Hybrid reasoning
+      - Deterministic behavior
+      - Filters
+      - Variables
+      - Template expressions
+      - Standard topics
+      - Custom topics
+      - Standard agent actions
+      - Custom agent actions
+      - Channels
+      - Digital experience
+      - Email
+      - Voice
+      - Slack
+      - Agent security context
+      - Employee agents
+      - Service agents
+      - Agent API
+  - id: prompt-engineering
+    name: Prompt Engineering
+    weight: 20
+    priority: 2
+    product_area: Prompt Builder
+    topics:
+      - Prompt Builder use cases
+      - Prompt template access controls
+      - Prompt template types
+      - Field generation templates
+      - Flex templates
+      - Grounding techniques
+      - Creating prompt templates
+      - Activating prompt templates
+      - Executing prompt templates
+      - Prompt writing best practices
+      - Trust Layer
+      - Security and privacy
+      - Model access management
+  - id: data-360-fundamentals
+    name: Data 360 Fundamentals
+    weight: 20
+    priority: 3
+    product_area: Data 360
+    topics:
+      - Agentforce Data Library
+      - Data Library concepts
+      - Chunking
+      - Indexing
+      - Search indexes
+      - Retrievers
+      - Grounding
+      - Hybrid search
+      - Vector search
+  - id: testing-deployment-maintenance
+    name: "Testing, Deployment, & Maintenance"
+    weight: 10
+    priority: 4
+    product_area: Agentforce
+    topics:
+      - Testing Center
+      - Agent testing
+      - Testing Center evaluations
+      - Sandbox to production deployment
+      - Agent deployment
+      - Prompt template deployment
+      - Maintenance
+  - id: governance-observability
+    name: Governance & Observability
+    weight: 10
+    priority: 5
+    product_area: Agentforce
+    topics:
+      - Agent monitoring
+      - Agent analytics
+      - Agent optimization
+      - Governance
+      - Observability
+  - id: multi-agent-orchestration
+    name: Multi-Agent Orchestration
+    weight: 5
+    priority: 6
+    product_area: Agentforce
+    topics:
+      - SOMA
+      - Single-Agent architecture
+      - Scalability
+      - Control
+      - MCP
+      - Model Context Protocol
+      - A2A
+      - Agent-to-Agent communication
