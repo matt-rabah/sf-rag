@@ -572,3 +572,19 @@ sources:
   authority: official
   notes: Official Salesforce Help source for best practices around agent user permissions
     and secure agent access to data and actions.
+- id: agentforce-enterprise-agentic-architecture
+  title: Enterprise Agentic Architecture and Design Patterns
+  source_type: developer_docs
+  source_url: https://architect.salesforce.com/docs/architect/fundamentals/guide/enterprise-agentic-architecture.html
+  certification: Agentforce Specialist
+  exam_domain: Multi-Agent Orchestration
+  product_area: Agentforce Platform
+  topic: Enterprise Agentic Architecture
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Architects source defining SOMA and describing supervisor/specialist
+    agent orchestration, shared governance and data, and MCP-wrapper patterns for
+    external functionality.
