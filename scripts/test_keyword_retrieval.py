@@ -47,7 +47,11 @@ def normalize_text(text: str):
     text = text.replace("’", "'")
     text = text.replace("–", "-")
     text = text.replace("—", "-")
-    text = re.sub(r"[*_`#>$begin:math:display$$end:math:display$():]", " ", text)
+
+    # Remove lightweight Markdown punctuation without destroying letters.
+    for char in ("*", "_", "`", "#", ">", "[", "]", "(", ")", ":"):
+        text = text.replace(char, " ")
+
     text = re.sub(r"\s+", " ", text)
     return text.strip()
 
