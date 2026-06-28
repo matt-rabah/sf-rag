@@ -652,3 +652,19 @@ sources:
   notes: Official Salesforce Help source explaining Agent Router, subagent classification,
     and how an agent selects the most relevant subagent based on user intent and available
     jobs.
+- id: agentforce-agent-types-considerations
+  title: Agent Types and Considerations
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_setup_explore_types.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Agent Types and Considerations
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining Agentforce agent types, default
+    templates for clouds and common use cases, and consideration pages for Service
+    Agent, Employee Agent, and Agentforce Default.
