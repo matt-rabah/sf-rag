@@ -291,3 +291,18 @@ sources:
   notes: Official Salesforce Help source explaining Einstein Trust Layer protections
     including sensitive data masking, toxicity scoring, audit trail, and Data 360
     storage.
+- id: agentforce-analytics-reports
+  title: Agentforce Analytics Reports
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.copilot_reports_dashboards.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Governance & Observability
+  product_area: Agentforce Platform
+  topic: Agentforce Analytics Reports
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining Agentforce Analytics reports,
+    Data 360 reporting, agent usage, success, and adoption insights.
