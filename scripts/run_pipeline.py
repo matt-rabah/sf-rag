@@ -9,6 +9,7 @@ STEPS = [
     ("Validate grounding documents", "scripts/validate_grounding_docs.py"),
     ("Chunk grounding documents", "scripts/chunk_grounding_docs.py"),
     ("Validate chunks", "scripts/validate_chunks.py"),
+    ("Validate evals", "scripts/validate_evals.py"),
 ]
 
 
