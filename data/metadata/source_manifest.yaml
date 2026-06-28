@@ -764,3 +764,63 @@ sources:
   release_relevance: current
   authority: official
   notes: Official Salesforce Trailhead source explaining Agentforce Builder components, including the Explorer, Canvas view, Script view, the Canvas/Script toggle, the Preview panel, Commit Version, and how Canvas and Script views stay in sync.
+
+- id: agentforce-optimization-overview
+  title: About Agent Optimization
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_optimize_about.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Governance & Observability
+  product_area: Agentforce Platform
+  topic: Agent Optimization Overview
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining how Agent Optimization uses intents, quality scores, session analysis, and trends to identify unresolved interactions and configuration gaps.
+
+- id: agentforce-optimization-setup
+  title: Set Up Agent Optimization
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_optimize_setup.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Governance & Observability
+  product_area: Agentforce Platform
+  topic: Agent Optimization Setup
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining Agent Optimization prerequisites, Session Tracing dependency, permission sets, supported agent types, and sandbox setup considerations.
+
+- id: agentforce-optimization-intents
+  title: Use Intents in Agent Optimization
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_optimize_intent_use.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Governance & Observability
+  product_area: Agentforce Platform
+  topic: Agent Optimization Intents
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining intent generation and clustering from closed sessions, cluster thresholds, tagged intents, and processing timing.
+
+- id: agentforce-optimization-scorers
+  title: Scorers and Custom Scorers (Beta)
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_optimize_scorers.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Governance & Observability
+  product_area: Agentforce Platform
+  topic: Agent Optimization Scorers
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining standard and custom scorers, session-level evaluation, sampling, post-session execution, and results in Agent Optimization and Analytics.
