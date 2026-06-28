@@ -700,3 +700,18 @@ sources:
   notes: Official Salesforce Help source explaining how Einstein Trust Layer identifies
     and masks sensitive information in prompts before sending them to the LLM, including
     protection for personally identifiable information.
+- id: einstein-trust-layer-toxicity-detection
+  title: Toxicity Detection
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_toxicity_detection.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Governance & Observability
+  product_area: Einstein Trust Layer
+  topic: Toxicity Detection
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining Einstein Trust Layer toxicity
+    detection for identifying and flagging toxic content in prompts and responses.
