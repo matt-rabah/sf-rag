@@ -212,3 +212,20 @@ sources:
   notes: Official Salesforce Help source explaining manual preview testing in Agentforce
     Builder, including subagent selection, action execution, reasoning, and the Interaction
     Summary panel.
+- id: agentforce-testing-center
+  title: Agentforce Testing Center
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_testing_center.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Testing, Deployment, & Maintenance
+  product_area: Agentforce Platform
+  topic: Agentforce Testing Center
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining Agentforce Testing Center, including
+    generated test cases from subagents and actions, Q&A tests from knowledge content,
+    uploaded custom scenarios, and the need to test non-deterministic AI agents across
+    many scenarios.
