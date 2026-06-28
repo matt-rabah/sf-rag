@@ -764,3 +764,78 @@ sources:
   release_relevance: current
   authority: official
   notes: Official Salesforce Trailhead source explaining Agentforce Builder components, including the Explorer, Canvas view, Script view, the Canvas/Script toggle, the Preview panel, Commit Version, and how Canvas and Script views stay in sync.
+
+- id: agentforce-enhanced-chat-v2
+  title: Connect a Service Agent to Enhanced Chat v2
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.service_agent_deploy_enhanced_chat_v2.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Enhanced Chat v2 Connection
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining how to add the Enhanced Chat v2 connection, configure routing and escalation, create a channel and deployment, and publish the web experience.
+
+- id: agentforce-enhanced-chat-v1
+  title: Connect an Agent to Enhanced Chat v1
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_deploy_enhanced_chat_v1.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Enhanced Chat v1 Connection
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining inbound routing for Service agents and authenticated Experience Cloud deployment for Employee agents with Enhanced Chat v1.
+
+- id: agentforce-other-messaging-channels
+  title: Connect a Service Agent to Other Messaging Channels
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.service_agent_messaging.htm&language=en_US
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Enhanced Messaging Channel Routing
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining how inbound Omni-Channel flows connect Agentforce Service agents to enhanced messaging channels, including Bring Your Own Channel.
+
+- id: agentforce-transfer-conversations-omni-channel
+  title: Transfer Conversations from an Agent with an Omni-Channel Flow
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.service_agent_escalation.htm&language=en_US
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Agent Conversation Escalation
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining the Escalation subagent, outbound Omni-Channel flow configuration, transfer destinations, escalation messages, and escalation testing.
+
+- id: agentforce-user-identification-actions
+  title: Add User Identification to Agentforce Actions
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=service.service_agentforce_implement_agents.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Customer Channel User Identification
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining user identification patterns for secure private actions across authenticated Experience sites, external Enhanced Chat deployments, and third-party messaging channels.
