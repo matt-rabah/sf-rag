@@ -399,3 +399,19 @@ sources:
   authority: official
   notes: Official Salesforce Help source explaining prompt template activation, deactivation,
     active versions, and user availability.
+- id: prompt-builder-configure-action
+  title: Configure an Action in a Prompt Template
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_configure_action.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Prompt Engineering
+  product_area: Agentforce Platform
+  topic: Prompt Template Actions
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining how Prompt Builder can configure
+    and add existing actions such as Flows, Apex, and Retrievers directly to a prompt
+    template.
