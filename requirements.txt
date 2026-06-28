@@ -1,0 +1,7 @@
+pyyaml
+python-frontmatter
+beautifulsoup4
+requests
+markdownify
+jsonschema
+python-dotenv

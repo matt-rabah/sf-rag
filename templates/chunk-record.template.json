@@ -1,0 +1,23 @@
+{
+  "chunk_id": "<source_id>__<chunk_number>",
+  "source_id": "<source_id>",
+  "title": "<Example Source Title>",
+  "source_type": "<salesforce_help>",
+  "source_url": "https://example.com/source-page",
+  "certification": "<Agentforce Specialist>",
+  "exam_domain": "Agentforce and Data 360",
+  "product_area": "Agentforce",
+  "topic": "Example Topic",
+  "retrieved_date": "2026-06-27",
+  "release_relevance": "current",
+  "authority": "official",
+  "status": "active",
+  "chunk_index": 1,
+  "chunk_heading": "Example Heading",
+  "chunk_text": "The cleaned source text for this chunk goes here.",
+  "token_estimate": 0,
+  "contains_steps": false,
+  "contains_definition": false,
+  "contains_limitations": false,
+  "contains_exam_relevance": false
+}

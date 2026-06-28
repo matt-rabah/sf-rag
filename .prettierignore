@@ -1,0 +1,4 @@
+data/raw/
+data/chunks/
+node_modules/
+.venv/

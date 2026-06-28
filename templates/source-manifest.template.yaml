@@ -1,0 +1,56 @@
+sources:
+  - id: example-source-id
+    title: Example Source Title
+    source_type: salesforce_help
+    source_url: https://example.com/source-page
+    certification: Agentforce Specialist
+    exam_domain: Agentforce and Data 360
+    product_area: Agentforce
+    topic: Example Topic
+    priority: high
+    status: pending
+    retrieved_date:
+    release_relevance: current
+    authority: official
+    notes: Add source-level notes here.
+
+allowed_values:
+  source_type:
+    - salesforce_help
+    - trailhead
+    - exam_guide
+    - release_notes
+    - developer_docs
+    - personal_notes
+    - practice_question
+
+  certification:
+    - Agentforce Specialist
+    - Salesforce Administrator
+    - Platform App Builder
+    - Data Cloud Consultant
+    - AI Associate
+
+  release_relevance:
+    - current
+    - needs_review
+    - archived
+    - deprecated
+
+  authority:
+    - official
+    - salesforce
+    - personal
+    - third_party
+
+  status:
+    - pending
+    - active
+    - draft
+    - needs_review
+    - deprecated
+
+  priority:
+    - high
+    - medium
+    - low
