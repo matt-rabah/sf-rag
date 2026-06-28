@@ -46,7 +46,7 @@ Agentforce Agent Builder and creating prompt templates in Prompt Builder. Furthe
 is familiar with testing tools such as Agentforce Testing Center and established deployment patterns
 from Sandbox to Production.
 
-## A candidate for this exam has the knowledge and skills to:
+## A candidate for this exam has the knowledge and skills to
 
 - Engineer Agentforce agents using next-generation authoring (NGA).
 - Manage the Agent and Prompt Template Lifecycle, including ideation, building, testing, deployment,
@@ -59,7 +59,7 @@ from Sandbox to Production.
 - Determine appropriate architectures, such as Single-Agent (SOMA), to ensure scalability and
   control.
 
-## A candidate for this certification is not expected to:
+## A candidate for this certification is not expected to
 
 - Have extensive knowledge of configuring and fine-tuning large language models (LLMs).
 - Understand the basics of coding languages such as Apex or Python.
@@ -165,7 +165,7 @@ As preparation for this exam, we recommend a combination of hands-on experience,
 completion, Trailhead Trails, and self-study in the areas listed in the Exam Outline section of this
 exam guide.
 
-### The self-study materials recommended for this exam include:
+### The self-study materials recommended for this exam include
 
 - [Agentblazer Status](https://trailhead.salesforce.com/agentblazer)
 - [Salesforce Certified Platform Administrator](https://trailhead.salesforce.com/en/credentials/administrator)
