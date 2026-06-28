@@ -34,6 +34,7 @@ domains:
       - Employee agents
       - Service agents
       - Agent API
+
   - id: prompt-engineering
     name: Prompt Engineering
     weight: 20
@@ -53,6 +54,7 @@ domains:
       - Trust Layer
       - Security and privacy
       - Model access management
+
   - id: data-360-fundamentals
     name: Data 360 Fundamentals
     weight: 20
@@ -68,6 +70,7 @@ domains:
       - Grounding
       - Hybrid search
       - Vector search
+
   - id: testing-deployment-maintenance
     name: "Testing, Deployment, & Maintenance"
     weight: 10
@@ -81,6 +84,7 @@ domains:
       - Agent deployment
       - Prompt template deployment
       - Maintenance
+
   - id: governance-observability
     name: Governance & Observability
     weight: 10
@@ -92,6 +96,7 @@ domains:
       - Agent optimization
       - Governance
       - Observability
+
   - id: multi-agent-orchestration
     name: Multi-Agent Orchestration
     weight: 5
