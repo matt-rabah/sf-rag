@@ -275,3 +275,19 @@ sources:
   authority: official
   notes: Official Salesforce Help source explaining Agentforce session tracing for
     observing, monitoring, investigating, and troubleshooting agent sessions.
+- id: einstein-trust-layer
+  title: Einstein Trust Layer
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_layer.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Governance & Observability
+  product_area: Agentforce Platform
+  topic: Einstein Trust Layer
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining Einstein Trust Layer protections
+    including sensitive data masking, toxicity scoring, audit trail, and Data 360
+    storage.
