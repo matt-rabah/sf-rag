@@ -105,3 +105,19 @@ sources:
   authority: official
   notes: Official Salesforce Help source explaining chunk data model objects and index
     data model objects created by search index configurations.
+- id: agentforce-answer-questions-with-knowledge
+  title: Agentforce Platform | Answer Questions with Knowledge
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.copilot_actions_ref_answer_questions_with_knowledge.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Answer Questions with Knowledge
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining the Answer Questions with Knowledge
+    action used by Agentforce to answer user questions from relevant knowledge articles
+    and uploaded files.
