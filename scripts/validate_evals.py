@@ -75,6 +75,7 @@ def main():
 
     all_errors = []
     record_count = 0
+    seen_eval_ids = {}
 
     for path in eval_files:
         with path.open("r", encoding="utf-8") as file:
@@ -91,6 +92,17 @@ def main():
                     continue
 
                 record_count += 1
+
+                eval_id = record.get("id")
+                if eval_id:
+                    if eval_id in seen_eval_ids:
+                        first_path, first_line = seen_eval_ids[eval_id]
+                        all_errors.append(
+                            f"{path.name} line {line_number}: Duplicate eval id '{eval_id}' also found in {first_path} line {first_line}."
+                        )
+                    else:
+                        seen_eval_ids[eval_id] = (path.name, line_number)
+
                 all_errors.extend(validate_eval(record, path, line_number))
 
     if all_errors:
