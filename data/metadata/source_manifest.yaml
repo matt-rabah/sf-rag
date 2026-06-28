@@ -166,3 +166,18 @@ sources:
   notes: Official Salesforce Help source explaining custom agent actions and the Salesforce
     functionality they can reference, including flows, Apex, external services, MuleSoft
     APIs, and prompt templates.
+- id: agentforce-action-instructions-best-practices
+  title: Best Practices for Agent Action Instructions
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.copilot_actions_instructions.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Agent Action Instructions
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining best practices for agent action
+    instructions, including what an action does and when an agent should use it.
