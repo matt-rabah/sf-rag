@@ -588,3 +588,19 @@ sources:
   notes: Official Salesforce Architects source defining SOMA and describing supervisor/specialist
     agent orchestration, shared governance and data, and MCP-wrapper patterns for
     external functionality.
+- id: agentforce-agent2agent-protocol
+  title: Agent2Agent Protocol
+  source_type: developer_docs
+  source_url: https://www.salesforce.com/agentforce/ai-agents/agent2agent-protocol/
+  certification: Agentforce Specialist
+  exam_domain: Multi-Agent Orchestration
+  product_area: Agentforce Platform
+  topic: Agent2Agent Protocol
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce source explaining Agent2Agent, or A2A, as an open standard
+    for secure communication, collaboration, context sharing, and task delegation
+    between AI agents from different platforms.

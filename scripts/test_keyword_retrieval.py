@@ -200,6 +200,38 @@ def score_chunk(question: str, chunk: dict):
         if normalize_text(topic) == "agent action instructions":
             score -= 4
 
+    # Boost Agent2Agent / A2A chunks for multi-agent interoperability questions.
+    is_a2a_question = (
+        "a2a" in question_normalized
+        or "agent2agent" in question_normalized
+        or "interoperability" in question_normalized
+        or ("specialized" in question_normalized and "agents" in question_normalized)
+        or "different platforms" in question_normalized
+        or "across systems" in question_normalized
+    )
+
+    if is_a2a_question:
+        if normalize_text(topic) == "agent2agent protocol":
+            score += 12
+
+        if "agent2agent" in combined_normalized or "a2a" in combined_normalized:
+            score += 10
+
+        if "interoperability" in combined_normalized:
+            score += 8
+
+        if "share context" in combined_normalized:
+            score += 6
+
+        if "delegate tasks" in combined_normalized:
+            score += 6
+
+        if "across systems" in combined_normalized:
+            score += 6
+
+        if normalize_text(topic) == "agent actions":
+            score -= 4
+
     return score
 
 
