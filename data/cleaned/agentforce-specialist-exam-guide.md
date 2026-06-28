@@ -13,6 +13,8 @@ authority: official
 status: active
 ---
 
+# Salesforce Certified Agentforce Specialist Exam Guide Spring 2026
+
 ## Contents
 
 [About the Salesforce Certified Agentforce Specialist Exam](#about-the-salesforce-certified-agentforce-specialist-exam)  
