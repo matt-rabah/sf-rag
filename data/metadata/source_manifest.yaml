@@ -121,3 +121,18 @@ sources:
   notes: Official Salesforce Help source explaining the Answer Questions with Knowledge
     action used by Agentforce to answer user questions from relevant knowledge articles
     and uploaded files.
+- id: agentforce-subagents-actions-instructions
+  title: Subagents, Actions, and Instructions in Agentforce
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.copilot_topics.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Subagents Actions Instructions
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining that subagents contain actions
+    and instructions, and that actions are the tools agents use to perform work.
