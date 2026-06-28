@@ -384,3 +384,18 @@ sources:
   notes: Official Salesforce Help source explaining how to preview resolved prompts
     with test data, grounding data, Preview Settings, Display Resolution, and iterative
     prompt revision before sending to the LLM.
+- id: prompt-builder-activate-deactivate-templates
+  title: Activate and Deactivate Prompt Templates
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_activate_deactivate_templates.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Prompt Engineering
+  product_area: Agentforce Platform
+  topic: Prompt Template Activation
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining prompt template activation, deactivation,
+    active versions, and user availability.
