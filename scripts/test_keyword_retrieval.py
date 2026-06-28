@@ -255,6 +255,70 @@ def score_chunk(question: str, chunk: dict):
         if normalize_text(topic) == "multi-agent orchestration beta":
             score -= 6
 
+    # Boost Preview/Test Builder chunks for review questions about Interaction Summary.
+    is_interaction_summary_question = (
+        "interaction summary" in question_normalized
+        or ("review" in question_normalized and "subagent selection" in question_normalized)
+        or ("review" in question_normalized and "action execution" in question_normalized)
+        or ("during agentforce testing" in question_normalized)
+        or ("reasoning" in question_normalized and "testing" in question_normalized)
+    )
+
+    if is_interaction_summary_question:
+        if normalize_text(topic) == "Preview and Test Builder":
+            score += 18
+
+        if "interaction summary panel" in combined_normalized:
+            score += 14
+
+        if "subagent selection" in combined_normalized:
+            score += 8
+
+        if "action execution" in combined_normalized:
+            score += 8
+
+        if "reasoning" in combined_normalized:
+            score += 8
+
+        if normalize_text(topic) == "subagent classification and routing":
+            score -= 10
+
+    # Boost Agent Router / subagent classification chunks for routing questions.
+    # Do not apply this boost to Preview/Test review questions.
+    is_agent_router_question = (
+        not is_interaction_summary_question
+        and (
+            "agent router" in question_normalized
+            or "starting subagent" in question_normalized
+            or "subagent classification" in question_normalized
+            or "subagent routing" in question_normalized
+            or ("route" in question_normalized and "subagent" in question_normalized)
+            or ("select" in question_normalized and "subagent" in question_normalized)
+        )
+    )
+
+    if is_agent_router_question:
+        if normalize_text(topic) == "subagent classification and routing":
+            score += 14
+
+        if "agent router" in combined_normalized:
+            score += 12
+
+        if "starting subagent" in combined_normalized:
+            score += 10
+
+        if "subagent classification" in combined_normalized:
+            score += 10
+
+        if "most relevant subagent" in combined_normalized:
+            score += 8
+
+        if "every agent conversation" in combined_normalized:
+            score += 8
+
+        if normalize_text(topic) == "multi-agent orchestration beta":
+            score -= 6
+
     return score
 
 

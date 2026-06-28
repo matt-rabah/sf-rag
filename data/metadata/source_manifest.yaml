@@ -636,3 +636,19 @@ sources:
   notes: Official Spring '26 release note explaining Multi-Agent Orchestration for
     Agentforce Beta, connecting agents with specialized agents in the same Salesforce
     org, and using connected subagents as a single unified point of contact.
+- id: agentforce-subagent-classification-routing
+  title: Subagent Classification and Routing
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_topics_routing.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Subagent Classification and Routing
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining Agent Router, subagent classification,
+    and how an agent selects the most relevant subagent based on user intent and available
+    jobs.
