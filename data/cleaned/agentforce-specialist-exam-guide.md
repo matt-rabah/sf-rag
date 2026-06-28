@@ -15,12 +15,12 @@ status: active
 
 ## Contents
 
-[About the Salesforce Certified Agentforce Specialist Exam](#about)  
-[Audience Description: Salesforce Certified Agentforce Specialist](#audience)  
-[Purpose of This Exam Guide](#purpose)  
-[About the Exam](#about-exam)  
+[About the Salesforce Certified Agentforce Specialist Exam](#about-the-salesforce-certified-agentforce-specialist-exam)  
+[Audience Description: Salesforce Certified Agentforce Specialist](#audience-description-salesforce-certified-agentforce-specialist)  
+[Purpose of This Exam Guide](#purpose-of-this-exam-guide)  
+[About the Exam](#about-the-exam)  
 [Exam Outline](#exam-outline)  
-[Recommended Training and Resources](#training)
+[Recommended Training and Resources](#recommended-training-and-resources)
 
 ## About the Salesforce Certified Agentforce Specialist Exam
 
