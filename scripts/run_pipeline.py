@@ -11,6 +11,7 @@ STEPS = [
     ("Validate chunks", "scripts/validate_chunks.py"),
     ("Validate evals", "scripts/validate_evals.py"),
     ("Test keyword retrieval", "scripts/test_keyword_retrieval.py"),
+    ("Test refusal behavior", "scripts/test_refusal_behavior.py"),
 ]
 
 
