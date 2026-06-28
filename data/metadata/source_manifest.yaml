@@ -541,3 +541,19 @@ sources:
   notes: Official Salesforce Help source explaining filters that control access to
     subagents and actions based on variables, including authentication-related filters
     for customer channels.
+- id: agentforce-manage-employee-agent-access
+  title: Manage Employee Agent Access
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_manage_aea_access.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Employee Agent Access
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining how to give users access to an
+    Agentforce Employee agent by adding the agent to a permission set or profile in
+    Setup.
