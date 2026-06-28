@@ -43,3 +43,18 @@ sources:
     release_relevance: current
     authority: official
     notes: "Official Salesforce Help source explaining data library setup, supported data sources, Data 360 indexing, search indexes, retrievers, and the Answer Questions with Knowledge action."
+
+  - id: data-360-retrieve-data
+    title: Retrieve Data
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=data.c360_a_ai_retriever.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Data 360 Fundamentals
+    product_area: Data 360
+    topic: Retrievers
+    priority: high
+    status: active
+    retrieved_date: 2026-06-28
+    release_relevance: current
+    authority: official
+    notes: "Official Salesforce Help source explaining that retrievers search and return relevant data from search indexes."
