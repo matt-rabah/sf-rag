@@ -731,3 +731,19 @@ sources:
   notes: Official Salesforce Help source explaining how generative AI audit data,
     also known as audit trail, tracks Einstein Trust Layer functionality such as data
     masking and toxicity detection.
+- id: agentforce-data-masking-limitations
+  title: Data Masking Limitations in Agentforce
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_trust_data_masking.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Governance & Observability
+  product_area: Agentforce Platform
+  topic: Data Masking Limitations
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining Agentforce data masking limitations,
+    Trust Layer protections beyond data masking, and zero data retention for information
+    sent to LLMs outside the Salesforce trust boundary.
