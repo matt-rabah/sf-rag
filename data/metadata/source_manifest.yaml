@@ -1,0 +1,15 @@
+sources:
+  - id: agentforce-specialist-exam-guide-spring-26
+    title: Salesforce Certified Agentforce Specialist Exam Guide Spring 2026
+    source_type: exam_guide
+    source_url: https://help.salesforce.com/s/articleView?id=005298924&type=1
+    certification: Agentforce Specialist
+    exam_domain: Exam Overview
+    product_area: Agentforce
+    topic: Certification Exam Guide
+    priority: high
+    status: active
+    retrieved_date: 2026-06-27
+    release_relevance: current
+    authority: official
+    notes: "Primary control document for Spring '26 Agentforce Specialist exam scope, domain weights, and source planning."
