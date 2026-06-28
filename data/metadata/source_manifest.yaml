@@ -28,3 +28,18 @@ sources:
     release_relevance: current
     authority: official
     notes: "Official Salesforce Help source defining Agentforce Data Libraries and their role in grounding trusted data for AI features."
+
+  - id: agentforce-data-library-setup
+    title: Setting Up Data Libraries
+    source_type: salesforce_help
+    source_url: https://help.salesforce.com/s/articleView?id=ai.data_library_setup.htm&language=en_US&type=5
+    certification: Agentforce Specialist
+    exam_domain: Data 360 Fundamentals
+    product_area: Data 360
+    topic: Data Library Setup
+    priority: high
+    status: active
+    retrieved_date: 2026-06-28
+    release_relevance: current
+    authority: official
+    notes: "Official Salesforce Help source explaining data library setup, supported data sources, Data 360 indexing, search indexes, retrievers, and the Answer Questions with Knowledge action."
