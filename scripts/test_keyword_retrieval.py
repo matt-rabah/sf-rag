@@ -154,6 +154,26 @@ def score_chunk(question: str, chunk: dict):
     if re.search(r"\b\d{1,2}%\b", heading):
         score += 3
 
+    # Boost retriever-specific chunks for retriever questions.
+    is_retriever_question = "retriever" in question_normalized or "retrievers" in question_normalized
+
+    if is_retriever_question:
+        if normalize_text(topic) == "retrievers":
+            score += 10
+
+        if "retriever searches" in combined_normalized:
+            score += 8
+
+        if "search index" in combined_normalized:
+            score += 4
+
+        if "relevant data" in combined_normalized:
+            score += 4
+
+        # Slightly reduce broad Data Library setup chunks when the user asks what a retriever does.
+        if "data library setup" in normalize_text(topic):
+            score -= 3
+
     return score
 
 
