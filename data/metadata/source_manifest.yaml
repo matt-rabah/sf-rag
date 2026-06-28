@@ -368,3 +368,19 @@ sources:
   notes: Official Salesforce Help source explaining how Prompt Builder dynamically
     grounds prompt templates with CRM data using merge fields that reference record
     fields, flows, related lists, and Apex.
+- id: prompt-builder-preview-resolved-prompt
+  title: Preview a Resolved Prompt
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_preview_resolved_prompt.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Prompt Engineering
+  product_area: Agentforce Platform
+  topic: Prompt Template Testing and Preview
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining how to preview resolved prompts
+    with test data, grounding data, Preview Settings, Display Resolution, and iterative
+    prompt revision before sending to the LLM.
