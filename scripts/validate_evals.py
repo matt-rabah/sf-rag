@@ -30,8 +30,15 @@ def validate_eval(record: dict, path: Path, line_number: int):
             f"{path.name} line {line_number}: expected_answer_contains must be a non-empty list."
         )
 
+    expected_heading_contains = record.get("expected_heading_contains")
+    if not isinstance(expected_heading_contains, list) or not expected_heading_contains:
+        errors.append(
+            f"{path.name} line {line_number}: expected_heading_contains must be a non-empty list."
+        )
+
     return errors
 
+    
 
 def main():
     eval_files = sorted(EVALS_DIR.glob("*.jsonl"))
