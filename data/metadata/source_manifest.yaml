@@ -12,7 +12,9 @@ sources:
     retrieved_date: 2026-06-27
     release_relevance: current
     authority: official
-    notes: "Primary control document for Spring '26 Agentforce Specialist exam scope, domain weights, and source planning."
+    notes:
+      Primary control document for Spring '26 Agentforce Specialist exam scope, domain weights, and
+      source planning.
 
   - id: agentforce-data-library-concept
     title: What Are Data Libraries?
@@ -27,7 +29,9 @@ sources:
     retrieved_date: 2026-06-28
     release_relevance: current
     authority: official
-    notes: "Official Salesforce Help source defining Agentforce Data Libraries and their role in grounding trusted data for AI features."
+    notes:
+      Official Salesforce Help source defining Agentforce Data Libraries and their role in grounding
+      trusted data for AI features.
 
   - id: agentforce-data-library-setup
     title: Setting Up Data Libraries
@@ -42,7 +46,9 @@ sources:
     retrieved_date: 2026-06-28
     release_relevance: current
     authority: official
-    notes: "Official Salesforce Help source explaining data library setup, supported data sources, Data 360 indexing, search indexes, retrievers, and the Answer Questions with Knowledge action."
+    notes:
+      Official Salesforce Help source explaining data library setup, supported data sources, Data
+      360 indexing, search indexes, retrievers, and the Answer Questions with Knowledge action.
 
   - id: data-360-retrieve-data
     title: Retrieve Data
@@ -57,4 +63,22 @@ sources:
     retrieved_date: 2026-06-28
     release_relevance: current
     authority: official
-    notes: "Official Salesforce Help source explaining that retrievers search and return relevant data from search indexes."
+    notes:
+      Official Salesforce Help source explaining that retrievers search and return relevant data
+      from search indexes.
+
+  - id: salesforce-spring-26-release-notes-index
+    title: Salesforce Spring '26 Release Notes Index
+    source_type: release_notes
+    source_url: https://help.salesforce.com/s/articleView?id=release-notes.salesforce_release_notes.htm&language=en_US&release=260&type=5
+    certification: Agentforce Specialist
+    exam_domain: Release Currency
+    product_area: Salesforce Platform
+    topic: Spring 2026 Release Notes Index
+    priority: medium
+    status: active
+    retrieved_date: "2026-06-28"
+    release_relevance: current
+    authority: official
+    notes:
+      Official Spring '26 release notes index used as a release-currency control source, not as a primary concept source.
