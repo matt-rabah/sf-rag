@@ -25,6 +25,18 @@ REQUIRED_FIELDS = [
 ]
 
 MAX_WORDS_PER_CHUNK = 350
+MIN_WORDS_PER_CHUNK = 20
+
+PLACEHOLDER_PHRASES = [
+    "write a short summary",
+    "paste or clean the source content here",
+    "explain why this content matters",
+    "add any implementation notes",
+    "concept 1",
+    "concept 2",
+    "concept 3",
+    "example source title",
+]
 
 
 def parse_markdown_with_frontmatter(path: Path):
@@ -65,7 +77,7 @@ def split_by_headings(markdown_body: str):
                 )
 
             current_heading = heading_match.group(2).strip()
-            current_lines = [line]
+            current_lines = []
         else:
             current_lines.append(line)
 
@@ -77,7 +89,7 @@ def split_by_headings(markdown_body: str):
             }
         )
 
-    return [section for section in sections if section["text"]]
+    return [section for section in sections if section["text"].strip()]
 
 
 def split_large_section(section_text: str, max_words: int = MAX_WORDS_PER_CHUNK):
@@ -98,8 +110,20 @@ def estimate_tokens(text: str):
     return round(len(text.split()) / 0.75)
 
 
+def is_placeholder_or_too_short(text: str):
+    normalized = text.lower().strip()
+    word_count = len(normalized.split())
+
+    if word_count < MIN_WORDS_PER_CHUNK:
+        return True
+
+    return any(phrase in normalized for phrase in PLACEHOLDER_PHRASES)
+
+
 def make_chunk_record(metadata: dict, chunk_index: int, heading: str, chunk_text: str):
     source_id = metadata["id"]
+
+    full_chunk_text = f"{heading}\n\n{chunk_text}".strip()
 
     return {
         "chunk_id": f"{source_id}__{chunk_index:03d}",
@@ -117,15 +141,16 @@ def make_chunk_record(metadata: dict, chunk_index: int, heading: str, chunk_text
         "status": metadata["status"],
         "chunk_index": chunk_index,
         "chunk_heading": heading,
-        "chunk_text": chunk_text,
-        "token_estimate": estimate_tokens(chunk_text),
-        "contains_steps": bool(re.search(r"(^|\n)\s*\d+\.", chunk_text)),
-        "contains_definition": " is " in chunk_text.lower() or " refers to " in chunk_text.lower(),
+        "chunk_text": full_chunk_text,
+        "token_estimate": estimate_tokens(full_chunk_text),
+        "contains_steps": bool(re.search(r"(^|\n)\s*\d+\.", full_chunk_text)),
+        "contains_definition": " is " in full_chunk_text.lower()
+        or " refers to " in full_chunk_text.lower(),
         "contains_limitations": any(
-            phrase in chunk_text.lower()
+            phrase in full_chunk_text.lower()
             for phrase in ["limitation", "limited to", "does not", "cannot", "only"]
         ),
-        "contains_exam_relevance": "exam relevance" in chunk_text.lower(),
+        "contains_exam_relevance": "exam relevance" in full_chunk_text.lower(),
     }
 
 
@@ -145,11 +170,16 @@ def main():
         sections = split_by_headings(body)
 
         chunk_index = 1
+        skipped_count = 0
 
         for section in sections:
             section_chunks = split_large_section(section["text"])
 
             for chunk_text in section_chunks:
+                if is_placeholder_or_too_short(chunk_text):
+                    skipped_count += 1
+                    continue
+
                 record = make_chunk_record(
                     metadata=metadata,
                     chunk_index=chunk_index,
@@ -160,7 +190,10 @@ def main():
                 all_chunks.append(record)
                 chunk_index += 1
 
-        print(f"✅ Chunked {path.relative_to(PROJECT_ROOT)} into {chunk_index - 1} chunks")
+        print(
+            f"✅ Chunked {path.relative_to(PROJECT_ROOT)} into "
+            f"{chunk_index - 1} chunks; skipped {skipped_count}"
+        )
 
     with OUTPUT_FILE.open("w", encoding="utf-8") as file:
         for chunk in all_chunks:
