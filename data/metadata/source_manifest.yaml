@@ -620,3 +620,19 @@ sources:
   notes: Official Salesforce Agentforce Developer Guide source explaining MCP solutions,
     MCP servers, secure request processing, and returning data or action results to
     an AI application.
+- id: agentforce-multi-agent-orchestration-beta-release-note
+  title: Orchestrate Other Agents
+  source_type: release_notes
+  source_url: https://help.salesforce.com/s/articleView?id=release-notes.rn_agentforce_orchestrate.htm&language=en_US&release=260&type=5
+  certification: Agentforce Specialist
+  exam_domain: Multi-Agent Orchestration
+  product_area: Agentforce Platform
+  topic: Multi-Agent Orchestration Beta
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Spring '26 release note explaining Multi-Agent Orchestration for
+    Agentforce Beta, connecting agents with specialized agents in the same Salesforce
+    org, and using connected subagents as a single unified point of contact.

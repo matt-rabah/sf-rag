@@ -232,6 +232,29 @@ def score_chunk(question: str, chunk: dict):
         if normalize_text(topic) == "agent actions":
             score -= 4
 
+    # Boost SOMA-specific chunks for Single Org, Multiple Agents questions.
+    is_soma_question = (
+        "soma" in question_normalized
+        or "single org multiple agents" in question_normalized
+        or ("what does" in question_normalized and "soma" in question_normalized)
+    )
+
+    if is_soma_question:
+        if normalize_text(topic) == "enterprise agentic architecture":
+            score += 12
+
+        if "soma" in combined_normalized:
+            score += 10
+
+        if "single org multiple agents" in combined_normalized:
+            score += 10
+
+        if "shared governance and data" in combined_normalized:
+            score += 8
+
+        if normalize_text(topic) == "multi-agent orchestration beta":
+            score -= 6
+
     return score
 
 
