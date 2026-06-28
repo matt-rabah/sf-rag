@@ -5,6 +5,7 @@ import sys
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 STEPS = [
+    ("Audit project structure", "scripts/audit_project.py"),
     ("Validate source manifest", "scripts/validate_source_manifest.py"),
     ("Validate grounding documents", "scripts/validate_grounding_docs.py"),
     ("Chunk grounding documents", "scripts/chunk_grounding_docs.py"),
