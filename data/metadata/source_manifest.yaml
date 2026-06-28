@@ -764,3 +764,78 @@ sources:
   release_relevance: current
   authority: official
   notes: Official Salesforce Trailhead source explaining Agentforce Builder components, including the Explorer, Canvas view, Script view, the Canvas/Script toggle, the Preview panel, Commit Version, and how Canvas and Script views stay in sync.
+
+- id: agentforce-deploy-metadata-new-org
+  title: Use Metadata to Move an Agent to a New Org
+  source_type: developer_docs
+  source_url: https://developer.salesforce.com/docs/ai/agentforce/guide/agent-dx-deploy-metadata.html
+  certification: Agentforce Specialist
+  exam_domain: Testing, Deployment, & Maintenance
+  product_area: Agentforce Platform
+  topic: Agent Metadata Deployment
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Agentforce Developer Guide source explaining source and target org prerequisites, metadata manifests, draft and committed agent representations, dependent metadata, and target-org agent user assignment.
+
+- id: agentforce-metadata-structure
+  title: "Agent Metadata: A Shallow Dive"
+  source_type: developer_docs
+  source_url: https://developer.salesforce.com/docs/ai/agentforce/guide/agent-dx-metadata.html
+  certification: Agentforce Specialist
+  exam_domain: Testing, Deployment, & Maintenance
+  product_area: Agentforce Platform
+  topic: Agent Metadata Structure
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Agentforce Developer Guide source explaining the metadata components that make up an agent, including AiAuthoringBundle, Bot, BotVersion, GenAiPlannerBundle, GenAiPlugin, and GenAiFunction.
+
+- id: agentforce-single-version-manifest
+  title: Manifest Defining a Single Agent Version
+  source_type: developer_docs
+  source_url: https://developer.salesforce.com/docs/ai/agentforce/guide/package-singleagent.html
+  certification: Agentforce Specialist
+  exam_domain: Testing, Deployment, & Maintenance
+  product_area: Agentforce Platform
+  topic: Single Agent Version Deployment
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Agentforce Developer Guide source explaining that a full agent must be deployed before a specific BotVersion and that the manifest must include the version's dependent metadata.
+
+- id: agentforce-generate-agent-template
+  title: agent generate template
+  source_type: developer_docs
+  source_url: https://developer.salesforce.com/docs/platform/salesforce-cli-reference/guide/cli_reference_agent_generate_template.html
+  certification: Agentforce Specialist
+  exam_domain: Testing, Deployment, & Maintenance
+  product_area: Agentforce Platform
+  topic: Agent Template Packaging
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce CLI reference explaining how to generate BotTemplate and GenAiPlannerBundle metadata for second-generation managed packaging and the current Agent Script limitation.
+
+- id: prompt-template-deployment-considerations
+  title: Deployment Considerations for Prompt Templates
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_considerations_deployment.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Testing, Deployment, & Maintenance
+  product_area: Prompt Builder
+  topic: Prompt Template Deployment
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining prompt-template package, change set, CLI, flow dependency, deployment ordering, and template-version considerations.
