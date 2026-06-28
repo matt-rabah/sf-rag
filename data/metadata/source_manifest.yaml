@@ -764,3 +764,78 @@ sources:
   release_relevance: current
   authority: official
   notes: Official Salesforce Trailhead source explaining Agentforce Builder components, including the Explorer, Canvas view, Script view, the Canvas/Script toggle, the Preview panel, Commit Version, and how Canvas and Script views stay in sync.
+
+- id: agentforce-set-up-connections-builder
+  title: Set Up Connections in Agentforce Builder
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_connections_set_up.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Agent Channel Connections
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining how to add and configure channel connections in the new Agentforce Builder and test an agent on a connected channel.
+
+- id: agentforce-deploy-experience-cloud-site
+  title: Deploy the Agent to Your Experience Cloud Site
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=service.support_deploy_the_agent_to_your_experience_cloud_site.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Experience Cloud Agent Deployment
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining prerequisites and steps for deploying an Agentforce Service agent to an Experience Cloud site with Enhanced Chat.
+
+- id: agentforce-service-email-configuration
+  title: Create an Email Configuration for Agentforce Service Agent on Email
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.service_agent_email_configuration.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Agentforce Service Email Channel
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining how an email configuration connects an email template and active Agentforce Service agent to one or more Email-to-Case routing addresses.
+
+- id: agentforce-voice-channel-pstn
+  title: Create the Channel for Agentforce Voice with PSTN
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_voice_channel.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Agentforce Voice Channel
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining how to create and activate an Agentforce Voice messaging channel that maps a PSTN phone number to an inbound Omni-Channel flow.
+
+- id: agentforce-connect-agent-slack
+  title: Connect an Agent to Slack
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_deploy_emp_slack.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Agentforce Slack Connection
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining how to connect an Agentforce Employee agent to Slack, activate it, grant user access, and install it in Slack workspaces.
