@@ -5,40 +5,66 @@ import sys
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 EVALS_DIR = PROJECT_ROOT / "evals"
 
-REQUIRED_FIELDS = [
+BASE_REQUIRED_FIELDS = [
     "id",
     "certification",
     "exam_domain",
     "question",
+    "notes",
+]
+
+RETRIEVAL_REQUIRED_FIELDS = [
     "expected_source_id",
     "expected_heading_contains",
     "expected_answer_contains",
-    "notes",
 ]
+
+REFUSAL_REQUIRED_FIELDS = [
+    "expected_behavior",
+    "expected_response_contains",
+]
+
+
+def validate_list_field(record: dict, field: str, path: Path, line_number: int):
+    value = record.get(field)
+
+    if not isinstance(value, list) or not value:
+        return [f"{path.name} line {line_number}: {field} must be a non-empty list."]
+
+    return []
 
 
 def validate_eval(record: dict, path: Path, line_number: int):
     errors = []
 
-    for field in REQUIRED_FIELDS:
+    for field in BASE_REQUIRED_FIELDS:
         if field not in record or record[field] in [None, ""]:
             errors.append(f"{path.name} line {line_number}: Missing required field: {field}")
 
-    expected_answer_contains = record.get("expected_answer_contains")
-    if not isinstance(expected_answer_contains, list) or not expected_answer_contains:
-        errors.append(
-            f"{path.name} line {line_number}: expected_answer_contains must be a non-empty list."
-        )
+    is_refusal_eval = record.get("expected_behavior") == "refuse"
 
-    expected_heading_contains = record.get("expected_heading_contains")
-    if not isinstance(expected_heading_contains, list) or not expected_heading_contains:
-        errors.append(
-            f"{path.name} line {line_number}: expected_heading_contains must be a non-empty list."
-        )
+    if is_refusal_eval:
+        for field in REFUSAL_REQUIRED_FIELDS:
+            if field not in record or record[field] in [None, ""]:
+                errors.append(f"{path.name} line {line_number}: Missing required field: {field}")
+
+        errors.extend(validate_list_field(record, "expected_response_contains", path, line_number))
+
+        if record.get("expected_behavior") != "refuse":
+            errors.append(
+                f"{path.name} line {line_number}: expected_behavior must be 'refuse' for refusal evals."
+            )
+
+    else:
+        for field in RETRIEVAL_REQUIRED_FIELDS:
+            if field not in record or record[field] in [None, ""]:
+                errors.append(f"{path.name} line {line_number}: Missing required field: {field}")
+
+        errors.extend(validate_list_field(record, "expected_heading_contains", path, line_number))
+        errors.extend(validate_list_field(record, "expected_answer_contains", path, line_number))
 
     return errors
 
-    
 
 def main():
     eval_files = sorted(EVALS_DIR.glob("*.jsonl"))
