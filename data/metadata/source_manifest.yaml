@@ -90,3 +90,18 @@ sources:
   authority: official
   notes: Official Salesforce Help source explaining hybrid search index creation,
     semantic chunks, searchable vectors, vector indexes, and keyword indexes.
+- id: data-360-chunk-index-data-model-objects
+  title: Chunk and Index Data Model Objects
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=data.c360_a_search_index_chunk_index_dmo.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Data 360 Fundamentals
+  product_area: Data 360
+  topic: Chunk and Index Data Model Objects
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining chunk data model objects and index
+    data model objects created by search index configurations.
