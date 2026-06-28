@@ -447,3 +447,18 @@ sources:
   notes: Official Salesforce Help source explaining best practices for building prompt
     templates, including clear natural language, concise instructions, avoiding jargon,
     and improving prompt quality.
+- id: prompt-builder-template-ingredients
+  title: Ingredients of a Prompt Template
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_template_ingredients.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Prompt Engineering
+  product_area: Agentforce Platform
+  topic: Prompt Template Ingredients
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining the ingredients of an effective
+    prompt template, including reusable and scalable prompt design.
