@@ -493,3 +493,19 @@ sources:
   notes: Official Salesforce Help source explaining how Answer Questions with Knowledge
     prompt templates use Agentforce Data Libraries, standard prompt template structure,
     LLM instructions, data resources, and user query inputs.
+- id: agentforce-building-blocks-of-agents
+  title: The Building Blocks of Agents
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.copilot_building_blocks.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Agent Building Blocks
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining the key components of agents,
+    including subagents and actions, data, connections and channels, and the reasoning
+    engine.
