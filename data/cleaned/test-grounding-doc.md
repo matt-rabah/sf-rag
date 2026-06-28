@@ -1,23 +1,24 @@
 ---
-id: example-source-id
-title: Example Source Title
-source_type: salesforce_help
-source_url: https://example.com/source-page
+id: test-grounding-doc
+title: Test Grounding Document
+source_type: personal_notes
+source_url: https://example.com/test
 certification: Agentforce Specialist
 exam_domain: Agentforce and Data 360
 product_area: Agentforce
-topic: Example Topic
+topic: Grounding Validation Test
 retrieved_date: 2026-06-27
-release_relevance: current
-authority: official
-status: active
+release_relevance: needs_review
+authority: personal
+status: draft
 ---
 
-# Example Source Title
+# Test Grounding Document
 
 ## Summary
 
-Write a short summary of what this source covers.
+This document is used to test the grounding feature of the RAG system. It contains a simple example
+of a grounding document that can be used to test the system.
 
 ## Key Concepts
 
@@ -27,12 +28,24 @@ Write a short summary of what this source covers.
 
 ## Source Content
 
-Paste or clean the source content here.
+# Example Source Content
+
+This is a simple example of source content that can be used to test the grounding feature of the RAG
+system.
+
+## Key Points
+
+- Concept 1
+- Concept 2
+- Concept 3
 
 ## Exam Relevance
 
 Explain why this content matters for the certification exam.
 
+Include the exam concept, likely question pattern, or common confusion this source helps resolve.
+
 ## Notes
 
-Add any implementation notes, warnings, or known ambiguity.
+Add any implementation notes, warnings, ambiguity, deprecated terminology, or source-quality
+concerns.
