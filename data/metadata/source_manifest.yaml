@@ -150,3 +150,19 @@ sources:
   release_relevance: current
   authority: official
   notes: Official Salesforce Help source explaining standard and custom agent actions.
+- id: agentforce-create-custom-action
+  title: Create a Custom Action
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_actions_custom.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: AI Agents
+  product_area: Agentforce Platform
+  topic: Custom Agent Actions
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining custom agent actions and the Salesforce
+    functionality they can reference, including flows, Apex, external services, MuleSoft
+    APIs, and prompt templates.
