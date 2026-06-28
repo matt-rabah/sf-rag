@@ -196,3 +196,19 @@ sources:
   authority: official
   notes: Official Salesforce Help source explaining how variables are created from
     action outputs and assigned to action inputs in Agentforce Builder.
+- id: agentforce-preview-and-test-builder
+  title: Preview and Test in Agentforce Builder
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.agent_preview_and_test.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Testing, Deployment, & Maintenance
+  product_area: Agentforce Platform
+  topic: Preview and Test in Agentforce Builder
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source explaining manual preview testing in Agentforce
+    Builder, including subagent selection, action execution, reasoning, and the Interaction
+    Summary panel.
