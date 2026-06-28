@@ -825,3 +825,48 @@ sources:
   release_relevance: current
   authority: official
   notes: Packaging considerations for Prompt Builder
+
+- id: data-360-unstructured-data-grounding
+  title: Why Data 360 for Unstructured Data
+  source_type: salesforce_help
+  source_url: data_360_6-28-2026.pdf
+  certification: Agentforce Specialist
+  exam_domain: Data 360 Fundamentals
+  product_area: Data 360
+  topic: Unstructured Data
+  priority: high
+  status: active
+  retrieved_date: 2026-06-28
+  release_relevance: current
+  authority: official
+  notes: Details on how Data 360 supports structured and unstructured data, real-time data, and Zero Copy Data Federation.
+
+- id: data-360-retriever-types
+  title: Retriever Types in Data 360
+  source_type: salesforce_help
+  source_url: data_360_6-28-2026.pdf
+  certification: Agentforce Specialist
+  exam_domain: Data 360 Fundamentals
+  product_area: Data 360
+  topic: Retrievers
+  priority: high
+  status: active
+  retrieved_date: 2026-06-28
+  release_relevance: current
+  authority: official
+  notes: Explains Dynamic Retrievers and Ensemble Retrievers.
+
+- id: data-360-hybrid-search-features
+  title: Hybrid Search Features in Data 360
+  source_type: salesforce_help
+  source_url: data_360_6-28-2026.pdf
+  certification: Agentforce Specialist
+  exam_domain: Data 360 Fundamentals
+  product_area: Data 360
+  topic: Hybrid Search
+  priority: high
+  status: active
+  retrieved_date: 2026-06-28
+  release_relevance: current
+  authority: official
+  notes: Explains Hybrid Search Autodrop, Hybrid Search Fusion Ranker, and Search Index Configuration.
