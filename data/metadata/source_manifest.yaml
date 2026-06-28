@@ -321,3 +321,18 @@ sources:
   authority: official
   notes: Official Salesforce Help source explaining Prompt Builder, prompt templates,
     testing, revision, customization, management, and grounding with CRM data.
+- id: prompt-builder-key-concepts
+  title: Prompt Builder Key Concepts
+  source_type: salesforce_help
+  source_url: https://help.salesforce.com/s/articleView?id=ai.prompt_builder_key_concepts.htm&language=en_US&type=5
+  certification: Agentforce Specialist
+  exam_domain: Prompt Engineering
+  product_area: Agentforce Platform
+  topic: Prompt Builder Key Concepts
+  priority: high
+  status: active
+  retrieved_date: '2026-06-28'
+  release_relevance: current
+  authority: official
+  notes: Official Salesforce Help source for Prompt Builder vocabulary and core concepts,
+    including prompt templates, merge fields, resources, and template grounding.
