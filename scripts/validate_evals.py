@@ -11,6 +11,7 @@ REQUIRED_FIELDS = [
     "exam_domain",
     "question",
     "expected_source_id",
+    "expected_heading_contains",
     "expected_answer_contains",
     "notes",
 ]
