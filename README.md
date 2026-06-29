@@ -274,8 +274,28 @@ Useful flags:
   (default `scenario`).
 - `--top-k N` sets how many grounding chunks to retrieve (default 6).
 
-Supported image types: PNG, JPG/JPEG, GIF, WebP. The model is instructed to answer
-only from retrieved context and to refuse when the context is insufficient.
+Supported image types: PNG, JPG/JPEG, GIF, WebP.
+
+### Hallucination Controls
+
+The answering script layers several safeguards on top of the prompt templates:
+
+- **Relevance gate.** If the best retrieved chunk scores below the relevance
+  threshold, the script refuses immediately (`I don't have enough source-backed
+  information to answer that.`) without calling the model. Out-of-corpus
+  questions can't produce an invented answer. Tune `MIN_TOP_SCORE` /
+  `MIN_CHUNK_SCORE` in `scripts/answer_question.py`.
+- **No padding with weak chunks.** Low-scoring chunks are dropped rather than
+  used to fill the context, so the model can't latch onto a tangential source.
+- **Grounding system prompt.** The model is told to answer only from the
+  retrieved context, cite only URLs present in that context, and refuse when it
+  is insufficient.
+- **Neutral transcription.** The answer step sees a transcription of the
+  question, never the raw screenshot — so a "correct" answer that is highlighted
+  or pre-selected in a practice-app screenshot cannot leak in and bypass
+  grounding.
+
+Use `--show-context` to see retrieval scores and whether the gate would refuse.
 
 ## RAG Design Principles
 
