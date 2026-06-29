@@ -343,6 +343,37 @@ def score_chunk(question: str, chunk: dict):
         if normalize_text(topic) == "multi-agent orchestration beta":
             score -= 6
 
+    # Boost sandbox chunks for sandbox-related questions
+    is_sandbox_question = (
+        "sandbox" in question_normalized
+        or "sandboxes" in question_normalized
+    )
+
+    if is_sandbox_question:
+        if normalize_text(topic) == "sandbox to production deployment":
+            score += 15
+        if "data-360-sandboxes" in chunk.get("source_id", ""):
+            score += 12
+        if "sandbox" in combined_normalized:
+            score += 8
+
+    # Boost code extension chunks for code extension related questions
+    is_code_extension_question = (
+        "code extension" in question_normalized
+        or "custom function" in question_normalized
+        or "custom script" in question_normalized
+        or "python sdk" in question_normalized
+        or "standby time" in question_normalized
+        or "compute size" in question_normalized
+        or "python code" in question_normalized
+    )
+
+    if is_code_extension_question:
+        if "code-extensions" in chunk.get("source_id", ""):
+            score += 15
+        if "code extension" in combined_normalized:
+            score += 8
+
     return score
 
 

@@ -17,6 +17,8 @@ REFUSAL_TRIGGERS = [
     "after spring 2026",
     "exam writer personally intended",
     "personally intend",
+    "java",
+    "node.js",
 ]
 
 

@@ -214,7 +214,13 @@ def check_drafts_not_in_cleaned(warnings):
     for path in cleaned_dir.glob("*.md"):
         text = path.read_text(encoding="utf-8").lower()
 
-        if "paste the cleaned" in text or "paste official" in text or "placeholder" in text:
+        if (
+            "paste the cleaned" in text
+            or "paste official" in text
+            or "placeholder text" in text
+            or "placeholder here" in text
+            or "insert placeholder" in text
+        ):
             warnings.append(
                 f"{path.relative_to(PROJECT_ROOT)} appears to contain placeholder text."
             )

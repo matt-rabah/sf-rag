@@ -990,3 +990,37 @@ sources:
     authority: official
     notes:
       Explains Hybrid Search Autodrop, Hybrid Search Fusion Ranker, and Search Index Configuration.
+
+  - id: data-360-sandboxes
+    title: Data 360 in a Sandbox
+    source_type: salesforce_help
+    source_url: data_360_6-28-2026.pdf
+    certification: Agentforce Specialist
+    exam_domain: Testing, Deployment, & Maintenance
+    product_area: Data 360
+    topic: Sandbox to production deployment
+    priority: high
+    status: active
+    retrieved_date: 2026-06-28
+    release_relevance: current
+    authority: official
+    notes:
+      Explains sandbox copy behavior for CRM object search index, ADL search index, external blob
+      store, sandbox billing, and Zero Copy connections.
+
+  - id: data-360-code-extensions
+    title: Code Extensions in Data 360
+    source_type: salesforce_help
+    source_url: data_360_6-28-2026.pdf
+    certification: Agentforce Specialist
+    exam_domain: Data 360 Fundamentals
+    product_area: Data 360
+    topic: Chunking
+    priority: high
+    status: active
+    retrieved_date: 2026-06-28
+    release_relevance: current
+    authority: official
+    notes:
+      Explains Code Extensions, script vs function types, development tools/workflow, compute size
+      options, credit billing standby calculations, and function limit.
