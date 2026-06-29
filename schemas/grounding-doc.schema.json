@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Salesforce Grounding Document Frontmatter Schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "salesforce_help",
+        "trailhead",
+        "exam_guide",
+        "release_notes",
+        "developer_docs",
+        "personal_notes",
+        "practice_question"
+      ]
+    },
+    "source_url": {
+      "type": "string"
+    },
+    "certification": {
+      "type": "string"
+    },
+    "exam_domain": {
+      "type": "string"
+    },
+    "product_area": {
+      "type": "string"
+    },
+    "topic": {
+      "type": "string"
+    },
+    "retrieved_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "release_relevance": {
+      "type": "string",
+      "enum": ["current", "needs_review", "archived", "deprecated"]
+    },
+    "authority": {
+      "type": "string",
+      "enum": ["official", "salesforce", "personal", "third_party"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "draft", "needs_review", "deprecated"]
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "source_type",
+    "source_url",
+    "certification",
+    "exam_domain",
+    "product_area",
+    "topic",
+    "retrieved_date",
+    "release_relevance",
+    "authority",
+    "status"
+  ]
+}
