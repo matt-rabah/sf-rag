@@ -243,6 +243,40 @@ Use this workflow for adding source material:
 9. Test retrieval using eval questions.
 10. Test answer generation only after retrieval works.
 
+## Answer a Question from a Screenshot
+
+You can answer a practice question from a photo or screenshot instead of copying
+and pasting the text. The script reads the question from the image, retrieves
+source-backed context from the corpus, and returns a grounded, cited explanation.
+
+Set an API key first:
+
+```bash
+export ANTHROPIC_API_KEY=your-key
+```
+
+Then run:
+
+```bash
+# From a screenshot or phone photo of the question
+python3 scripts/answer_question.py --image /path/to/question.png
+
+# From text instead of an image
+python3 scripts/answer_question.py --text "Which retriever type uses hybrid search?"
+
+# Preview only what was retrieved, with no model call (no API key needed)
+python3 scripts/answer_question.py --text "What does SOMA mean?" --show-context
+```
+
+Useful flags:
+
+- `--prompt {scenario,grounding,technical}` selects the answer template in `prompts/`
+  (default `scenario`).
+- `--top-k N` sets how many grounding chunks to retrieve (default 6).
+
+Supported image types: PNG, JPG/JPEG, GIF, WebP. The model is instructed to answer
+only from retrieved context and to refuse when the context is insufficient.
+
 ## RAG Design Principles
 
 This project prioritizes accuracy over broad coverage.

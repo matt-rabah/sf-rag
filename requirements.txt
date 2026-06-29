@@ -5,3 +5,4 @@ requests
 markdownify
 jsonschema
 python-dotenv
+anthropic
