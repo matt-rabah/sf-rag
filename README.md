@@ -276,6 +276,24 @@ Useful flags:
 
 Supported image types: PNG, JPG/JPEG, GIF, WebP.
 
+### Answer Format
+
+Each answer is returned as the correct letter, a confidence score out of 10, and
+a one-sentence reason each remaining option is wrong:
+
+```text
+Answer: C
+Confidence: 8/10
+
+Why the others are wrong:
+- A: ...
+- B: ...
+- D: ...
+```
+
+Questions with an E option are handled the same way. When retrieval is too weak
+to support an answer, the response is the refusal phrase instead (see below).
+
 ### Hallucination Controls
 
 The answering script layers several safeguards on top of the prompt templates:
