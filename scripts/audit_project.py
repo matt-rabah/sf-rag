@@ -35,6 +35,7 @@ REQUIRED_FILES = [
     "scripts/test_keyword_retrieval.py",
     "scripts/test_refusal_behavior.py",
     "scripts/test_answer_quality.py",
+    "scripts/coverage_report.py",
 ]
 
 CONFUSING_FILES = [

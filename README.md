@@ -378,6 +378,20 @@ regressions that would make a known-answerable question unanswerable are caught
 automatically. Use this harness to verify that changes (new sources, retriever
 tweaks, prompt edits) actually improve answers rather than just feeling better.
 
+## Coverage Report
+
+To see where the corpus and evals are thin relative to the exam blueprint:
+
+```bash
+python3 scripts/coverage_report.py
+```
+
+It maps `data/metadata/exam_domain_map.yaml` against the corpus and eval suites,
+showing each domain's exam weight vs. its corpus share and eval counts (flagging
+domains that are `UNDER`-resourced), and lists exam topics that no chunk currently
+covers. Uncovered topics are candidates for **new official source documents** —
+add them through the ingestion workflow above rather than inventing content.
+
 ## RAG Design Principles
 
 This project prioritizes accuracy over broad coverage.
