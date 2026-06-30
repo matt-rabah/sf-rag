@@ -25,6 +25,7 @@ REQUIRED_FILES = [
     "data/cleaned/agentforce-specialist-exam-guide.md",
     "evals/retrieval_tests.jsonl",
     "evals/refusal_tests.jsonl",
+    "evals/answer_tests.jsonl",
     "scripts/run_pipeline.py",
     "scripts/validate_source_manifest.py",
     "scripts/validate_grounding_docs.py",
@@ -33,6 +34,7 @@ REQUIRED_FILES = [
     "scripts/validate_evals.py",
     "scripts/test_keyword_retrieval.py",
     "scripts/test_refusal_behavior.py",
+    "scripts/test_answer_quality.py",
 ]
 
 CONFUSING_FILES = [

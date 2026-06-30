@@ -243,6 +243,141 @@ Use this workflow for adding source material:
 9. Test retrieval using eval questions.
 10. Test answer generation only after retrieval works.
 
+## Answer a Question from a Screenshot
+
+You can answer a practice question from a photo or screenshot instead of copying
+and pasting the text. The script reads the question from the image, retrieves
+source-backed context from the corpus, and returns a grounded, cited explanation.
+
+Set an API key first:
+
+```bash
+export ANTHROPIC_API_KEY=your-key
+```
+
+Then run:
+
+```bash
+# From a screenshot or phone photo of the question
+python3 scripts/answer_question.py --image /path/to/question.png
+
+# From text instead of an image
+python3 scripts/answer_question.py --text "Which retriever type uses hybrid search?"
+
+# Preview only what was retrieved, with no model call (no API key needed)
+python3 scripts/answer_question.py --text "What does SOMA mean?" --show-context
+```
+
+Useful flags:
+
+- `--prompt {scenario,grounding,technical}` selects the answer template in `prompts/`
+  (default `scenario`).
+- `--top-k N` sets how many grounding chunks to retrieve (default 6).
+
+Supported image types: PNG, JPG/JPEG, GIF, WebP.
+
+### Answer Format
+
+Each answer is returned as the correct letter, a confidence score out of 10, and
+a one-sentence reason each remaining option is wrong:
+
+```text
+Answer: C
+Confidence: 8/10
+
+Why the others are wrong:
+- A: ...
+- B: ...
+- D: ...
+```
+
+Questions with an E option are handled the same way. When retrieval is too weak
+to support an answer, the response is the refusal phrase instead (see below).
+
+### Hallucination Controls
+
+The answering script layers several safeguards on top of the prompt templates:
+
+- **Relevance gate.** If the best retrieved chunk scores below the relevance
+  threshold, the script refuses immediately (`I don't have enough source-backed
+  information to answer that.`) without calling the model. Out-of-corpus
+  questions can't produce an invented answer. Tune `MIN_TOP_SCORE` /
+  `MIN_CHUNK_SCORE` in `scripts/answer_question.py`.
+- **No padding with weak chunks.** Low-scoring chunks are dropped rather than
+  used to fill the context, so the model can't latch onto a tangential source.
+- **Grounding system prompt.** The model is told to answer only from the
+  retrieved context, cite only URLs present in that context, and refuse when it
+  is insufficient.
+- **Neutral transcription.** The answer step sees a transcription of the
+  question, never the raw screenshot — so a "correct" answer that is highlighted
+  or pre-selected in a practice-app screenshot cannot leak in and bypass
+  grounding.
+
+Use `--show-context` to see retrieval scores and whether the gate would refuse.
+
+### Faithfulness Verification
+
+After the model answers, a **deterministic guard runs automatically** (no API key,
+no flag) and appends a caution if it finds:
+
+- a **URL or "Source N" reference** that is not in / exceeds the retrieved context
+  (an invented citation), or
+- a chosen answer whose terms are **largely absent from the retrieved context**
+  (an answer grounded in nothing).
+
+For a stronger check, add `--verify` to run a second **LLM entailment pass**: it
+re-reads the retrieved context and confirms it actually supports the chosen
+answer. If it does not, the answer is flagged so you don't trust an ungrounded
+pick. (Lexical overlap alone can't tell a correct option from an in-vocabulary
+distractor, so the entailment pass is the real support check; the deterministic
+guard catches the obvious failures for free.)
+
+## Hybrid Retrieval (optional)
+
+By default the answerer retrieves with the keyword scorer. You can add a
+**semantic** signal so paraphrased questions (same meaning, different words) rank
+the right chunks higher:
+
+```bash
+python3 -m pip install -r requirements.txt   # installs scikit-learn, numpy, joblib
+python3 scripts/build_embeddings.py          # builds data/chunks/semantic_index.joblib
+```
+
+Once the index exists, `answer_question.py` automatically runs in **hybrid** mode
+(keyword + semantic, blended with reciprocal rank fusion). If the index or the
+optional dependencies are missing, it falls back to keyword-only with no change in
+behavior. Rebuild the index after re-chunking.
+
+**Safety note:** the semantic backend (TF-IDF + SVD / LSA) is download-free and
+deterministic, but on a small corpus it does *not* reliably tell an off-topic
+question from an on-topic one. So semantics only **re-rank** chunks that already
+passed the keyword relevance gate — the decision of *whether to answer at all*
+stays keyword-only. This keeps out-of-corpus questions refusing correctly. The
+embedding backend is pluggable (`scripts/semantic_index.py`): in an environment
+that allows model downloads, a dense transformer embedder can be swapped in for
+stronger paraphrase matching.
+
+## Measuring Answer Quality
+
+`evals/answer_tests.jsonl` is a labeled set of multiple-choice questions (with
+known correct answers, each grounded in a specific source document). The scorer
+runs them through the same retrieval + gate + answer path as the study tool:
+
+```bash
+# Structural checks only — no API key needed. Confirms each question's supporting
+# source is retrieved and the relevance gate would not wrongly refuse.
+python3 scripts/test_answer_quality.py --no-model
+
+# Full run (requires ANTHROPIC_API_KEY): also measures answer accuracy and how
+# well the model's stated confidence matches its real accuracy (calibration).
+python3 scripts/test_answer_quality.py
+```
+
+The structural checks run as part of `scripts/run_pipeline.py`, so retrieval
+regressions that would make a known-answerable question unanswerable are caught
+automatically. Use this harness to verify that changes (new sources, retriever
+tweaks, prompt edits) actually improve answers rather than just feeling better.
+
 ## RAG Design Principles
 
 This project prioritizes accuracy over broad coverage.

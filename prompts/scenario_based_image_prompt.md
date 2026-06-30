@@ -37,46 +37,21 @@ Your task is to:
 
 # Response Format
 
-## Extracted Question
+Reply in exactly this format and nothing else:
 
-[Put the OCR-extracted question text here]
+**Answer: <letter>**
+**Confidence: <N>/10**
 
-## Extracted Options
+Why the others are wrong:
+- <letter>: <one short, source-backed sentence>
+- <letter>: <one short, source-backed sentence>
+- <letter>: <one short, source-backed sentence>
 
-- A: [Text of option A]
-- B: [Text of option B]
-- C: [Text of option C]
-- D: [Text of option D]
-
-## Correct Answer
-
-State the answer letter and answer text.
-
-## Tested Concept
-
-Name the specific Agentforce/Salesforce concept being tested.
-
-## Why This Is Correct
-
-Provide a detailed, source-backed explanation of why this option satisfies the scenario's business constraints.
-
-## Why the Other Options Are Wrong
-
-- A: [Explain why this is wrong based on the context, or state if the context is insufficient to evaluate it]
-- B: [Explain why this is wrong based on the context, or state if the context is insufficient to evaluate it]
-- C: [Explain why this is wrong based on the context, or state if the context is insufficient to evaluate it]
-- D: [Explain why this is wrong based on the context, or state if the context is insufficient to evaluate it]
-
-## Source
-
-List the source title and URL from the retrieved context.
-
-## Confidence
-
-State one of: **High**, **Medium**, or **Low**.
-- Use **High** only when the retrieved context directly supports the correct answer and rules out the distractors.
-- Use **Medium** when the correct answer is supported but some distractor explanations require limited deduction.
-- Use **Low** when the retrieved context is related but incomplete.
+Rules:
+- Give one "Why the others are wrong" line for every option in the question except the correct one (cover A, B, C, D, and E if it appears).
+- Keep each explanation to a single sentence grounded in the retrieved context; do not restate the option text.
+- Confidence is out of 10 and reflects how directly the retrieved context supports the answer: 10 means the context states it explicitly, lower values mean more inference was required.
+- If the retrieved context is insufficient to support one answer, ignore this format and reply with exactly: I don't have enough source-backed information to answer that.
 
 # Retrieved Context
 

@@ -67,7 +67,9 @@ def validate_eval(record: dict, path: Path, line_number: int):
 
 
 def main():
-    eval_files = sorted(EVALS_DIR.glob("*.jsonl"))
+    # answer_tests.jsonl uses the answer-quality schema (options/correct) and is
+    # validated by scripts/test_answer_quality.py, not the retrieval/refusal schema.
+    eval_files = sorted(p for p in EVALS_DIR.glob("*.jsonl") if p.name != "answer_tests.jsonl")
 
     if not eval_files:
         print(f"No eval files found in {EVALS_DIR}")
