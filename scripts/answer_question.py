@@ -180,27 +180,74 @@ def extract_question_from_image(client, image_block: dict) -> str:
     return text
 
 
-def retrieve(question: str, chunks: list, top_k: int) -> list:
-    scored = sorted(
-        ({"score": score_chunk(question, chunk), "chunk": chunk} for chunk in chunks),
-        key=lambda item: item["score"],
-        reverse=True,
-    )
-    return scored[:top_k]
+# Reciprocal-rank-fusion constant for blending keyword and semantic rankings.
+RRF_K = 60
+
+_SEM_CACHE = "unset"  # lazily loaded semantic index (or None if unavailable)
 
 
-def build_retrieved_context(results: list) -> tuple[str, bool]:
+def _semantic_index():
+    global _SEM_CACHE
+    if _SEM_CACHE == "unset":
+        try:
+            import semantic_index
+
+            _SEM_CACHE = semantic_index.load()
+        except Exception:
+            _SEM_CACHE = None
+    return _SEM_CACHE
+
+
+def retrieve(question: str, chunks: list, top_k: int) -> dict:
+    """Hybrid retrieval.
+
+    Always scores chunks with the keyword retriever (the gate's safety signal). If
+    the optional semantic index is present, it blends the keyword and semantic
+    rankings with reciprocal rank fusion to reorder candidates — but the keyword
+    score is preserved on each item and remains the basis for the relevance gate,
+    because the semantic (LSA) signal does not reliably separate out-of-corpus
+    questions and must not influence whether we answer at all.
+
+    Returns {"items": top_k items sorted by fused rank, "best_kw": global best
+    keyword score}. With no semantic index, the order reduces exactly to keyword
+    order, so behavior is unchanged.
+    """
+    sem = _semantic_index()
+    sem_scores = sem.scores(question) if sem else {}
+
+    items = [
+        {"score": score_chunk(question, c), "sem": sem_scores.get(c.get("chunk_id"), 0.0), "chunk": c}
+        for c in chunks
+    ]
+    best_kw = max((it["score"] for it in items), default=0)
+
+    kw_rank = {id(it): r for r, it in enumerate(sorted(items, key=lambda it: it["score"], reverse=True))}
+    sem_rank = {id(it): r for r, it in enumerate(sorted(items, key=lambda it: it["sem"], reverse=True))}
+    for it in items:
+        fused = 1.0 / (RRF_K + kw_rank[id(it)])
+        if sem:
+            fused += 1.0 / (RRF_K + sem_rank[id(it)])
+        it["fused"] = fused
+
+    items.sort(key=lambda it: it["fused"], reverse=True)
+    return {"items": items[:top_k], "best_kw": best_kw}
+
+
+def kept_items(retrieval: dict) -> list:
+    """Items that pass the keyword relevance floor, in fused order."""
+    return [it for it in retrieval["items"] if it["score"] >= MIN_CHUNK_SCORE]
+
+
+def build_retrieved_context(retrieval: dict) -> tuple[str, bool]:
     """Return (context_text, sufficient).
 
-    Applies the relevance gate: drops chunks below MIN_CHUNK_SCORE and, if the
-    best match is below MIN_TOP_SCORE (or nothing survives), returns the
-    insufficient-context sentinel so the model refuses instead of grounding on
-    weak material.
+    The gate is keyword-only: if the best keyword match is below MIN_TOP_SCORE (or
+    nothing clears MIN_CHUNK_SCORE), return the insufficient-context sentinel so
+    the model refuses instead of grounding on weak material. Semantics only affect
+    ordering, never the decision to answer.
     """
-    best_score = results[0]["score"] if results else 0
-    kept = [r for r in results if r["score"] >= MIN_CHUNK_SCORE]
-
-    if not kept or best_score < MIN_TOP_SCORE:
+    kept = kept_items(retrieval)
+    if not kept or retrieval["best_kw"] < MIN_TOP_SCORE:
         return INSUFFICIENT_CONTEXT, False
 
     blocks = []
@@ -280,16 +327,16 @@ def main() -> int:
     else:
         question = args.text
 
-    results = retrieve(question, chunks, args.top_k)
-    retrieved_context, sufficient = build_retrieved_context(results)
+    retrieval = retrieve(question, chunks, args.top_k)
+    retrieved_context, sufficient = build_retrieved_context(retrieval)
 
     if args.show_context:
-        best = results[0]["score"] if results else 0
+        mode = "hybrid (keyword + semantic)" if _semantic_index() else "keyword-only"
         print("=== Extracted question ===")
         print(question)
         print(
-            f"\n=== Retrieval (best score {best}; threshold {MIN_TOP_SCORE}; "
-            f"sufficient={sufficient}) ==="
+            f"\n=== Retrieval [{mode}] (best keyword score {retrieval['best_kw']}; "
+            f"threshold {MIN_TOP_SCORE}; sufficient={sufficient}) ==="
         )
         print(retrieved_context)
         if not sufficient:

@@ -74,14 +74,13 @@ def question_text(record: dict) -> str:
 
 
 def structural_check(record: dict, chunks: list) -> dict:
-    results = aq.retrieve(question_text(record), chunks, aq.DEFAULT_TOP_K)
-    _, sufficient = aq.build_retrieved_context(results)
+    retrieval = aq.retrieve(question_text(record), chunks, aq.DEFAULT_TOP_K)
+    _, sufficient = aq.build_retrieved_context(retrieval)
     expected = record["expected_source_id"]
     source_retrieved = any(
-        r["chunk"].get("source_id") == expected and r["score"] >= aq.MIN_CHUNK_SCORE
-        for r in results
+        it["chunk"].get("source_id") == expected for it in aq.kept_items(retrieval)
     )
-    return {"answerable": sufficient, "source_retrieved": source_retrieved, "results": results}
+    return {"answerable": sufficient, "source_retrieved": source_retrieved, "retrieval": retrieval}
 
 
 def parse_answer(text: str) -> dict:
@@ -95,8 +94,8 @@ def parse_answer(text: str) -> dict:
     }
 
 
-def model_check(record: dict, results: list, client, prompt_name: str) -> dict:
-    context, sufficient = aq.build_retrieved_context(results)
+def model_check(record: dict, retrieval: dict, client, prompt_name: str) -> dict:
+    context, sufficient = aq.build_retrieved_context(retrieval)
     if not sufficient:
         return {"refused": True, "letter": None, "confidence": None, "correct": False}
     prompt_text = aq.load_prompt(prompt_name, context)
@@ -170,7 +169,7 @@ def main() -> int:
             line += "  <- " + "; ".join(flags)
 
         if run_model:
-            m = model_check(r, s["results"], client, args.prompt)
+            m = model_check(r, s["retrieval"], client, args.prompt)
             if m["refused"]:
                 refused += 1
                 line += "  | model: REFUSED"

@@ -6,3 +6,8 @@ markdownify
 jsonschema
 python-dotenv
 anthropic
+
+# Optional: hybrid (semantic) retrieval — scripts/build_embeddings.py
+scikit-learn
+numpy
+joblib

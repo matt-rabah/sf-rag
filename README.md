@@ -315,6 +315,31 @@ The answering script layers several safeguards on top of the prompt templates:
 
 Use `--show-context` to see retrieval scores and whether the gate would refuse.
 
+## Hybrid Retrieval (optional)
+
+By default the answerer retrieves with the keyword scorer. You can add a
+**semantic** signal so paraphrased questions (same meaning, different words) rank
+the right chunks higher:
+
+```bash
+python3 -m pip install -r requirements.txt   # installs scikit-learn, numpy, joblib
+python3 scripts/build_embeddings.py          # builds data/chunks/semantic_index.joblib
+```
+
+Once the index exists, `answer_question.py` automatically runs in **hybrid** mode
+(keyword + semantic, blended with reciprocal rank fusion). If the index or the
+optional dependencies are missing, it falls back to keyword-only with no change in
+behavior. Rebuild the index after re-chunking.
+
+**Safety note:** the semantic backend (TF-IDF + SVD / LSA) is download-free and
+deterministic, but on a small corpus it does *not* reliably tell an off-topic
+question from an on-topic one. So semantics only **re-rank** chunks that already
+passed the keyword relevance gate — the decision of *whether to answer at all*
+stays keyword-only. This keeps out-of-corpus questions refusing correctly. The
+embedding backend is pluggable (`scripts/semantic_index.py`): in an environment
+that allows model downloads, a dense transformer embedder can be swapped in for
+stronger paraphrase matching.
+
 ## Measuring Answer Quality
 
 `evals/answer_tests.jsonl` is a labeled set of multiple-choice questions (with
