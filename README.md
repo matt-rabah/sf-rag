@@ -315,6 +315,23 @@ The answering script layers several safeguards on top of the prompt templates:
 
 Use `--show-context` to see retrieval scores and whether the gate would refuse.
 
+### Faithfulness Verification
+
+After the model answers, a **deterministic guard runs automatically** (no API key,
+no flag) and appends a caution if it finds:
+
+- a **URL or "Source N" reference** that is not in / exceeds the retrieved context
+  (an invented citation), or
+- a chosen answer whose terms are **largely absent from the retrieved context**
+  (an answer grounded in nothing).
+
+For a stronger check, add `--verify` to run a second **LLM entailment pass**: it
+re-reads the retrieved context and confirms it actually supports the chosen
+answer. If it does not, the answer is flagged so you don't trust an ungrounded
+pick. (Lexical overlap alone can't tell a correct option from an in-vocabulary
+distractor, so the entailment pass is the real support check; the deterministic
+guard catches the obvious failures for free.)
+
 ## Hybrid Retrieval (optional)
 
 By default the answerer retrieves with the keyword scorer. You can add a

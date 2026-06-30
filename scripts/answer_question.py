@@ -41,6 +41,7 @@ import sys
 # chunks exactly the way the retrieval evals do.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from test_keyword_retrieval import load_jsonl, score_chunk  # noqa: E402
+import verify_faithfulness  # noqa: E402
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CHUNKS_FILE = PROJECT_ROOT / "data" / "chunks" / "grounding_chunks.jsonl"
@@ -309,6 +310,12 @@ def main() -> int:
         action="store_true",
         help="Print the question and retrieved context, then stop (no answer generated).",
     )
+    parser.add_argument(
+        "--verify",
+        action="store_true",
+        help="Run a second LLM pass that checks the answer is entailed by the retrieved "
+        "context; appends a caution if it is not.",
+    )
     args = parser.parse_args()
 
     if args.image and not args.image.exists():
@@ -352,7 +359,30 @@ def main() -> int:
         client = make_client()
     prompt_text = load_prompt(args.prompt, retrieved_context)
     print("Answering from retrieved context...", file=sys.stderr)
-    print(answer(client, prompt_text, question))
+    answer_text = answer(client, prompt_text, question)
+
+    # Deterministic faithfulness guard (always on): flag invented citations or an
+    # answer whose terms are absent from the retrieved context.
+    assessment = verify_faithfulness.deterministic_assess(answer_text, question, retrieved_context)
+    cautions = list(assessment["cautions"])
+
+    # Optional LLM entailment judge: confirm the context actually supports the answer.
+    if args.verify and assessment["letter"] and not assessment["refused"]:
+        options = verify_faithfulness.extract_options(question)
+        option_text = options.get(assessment["letter"], "")
+        print("Verifying the answer is entailed by the sources...", file=sys.stderr)
+        verdict = verify_faithfulness.llm_verify(
+            client, MODEL, retrieved_context, question, assessment["letter"], option_text
+        )
+        if verdict["supported"] is False:
+            cautions.append(
+                f"an independent grounding check did NOT find support for answer "
+                f"{assessment['letter']} in the retrieved context ({verdict['reason']})"
+            )
+
+    print(answer_text)
+    if cautions:
+        print(verify_faithfulness.caution_block(cautions))
     return 0
 
 

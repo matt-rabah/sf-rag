@@ -30,19 +30,16 @@ a model run, if accuracy falls below --min-accuracy (default 0.8).
 from pathlib import Path
 import argparse
 import os
-import re
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from test_keyword_retrieval import load_jsonl, score_chunk  # noqa: E402
 import answer_question as aq  # noqa: E402
+import verify_faithfulness as vf  # noqa: E402
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CHUNKS_FILE = PROJECT_ROOT / "data" / "chunks" / "grounding_chunks.jsonl"
 EVALS_FILE = PROJECT_ROOT / "evals" / "answer_tests.jsonl"
-
-ANSWER_RE = re.compile(r"Answer:\s*\**\s*([A-E])\b", re.IGNORECASE)
-CONFIDENCE_RE = re.compile(r"Confidence:\s*\**\s*(\d{1,2})", re.IGNORECASE)
 
 
 def validate(records: list) -> list:
@@ -83,26 +80,20 @@ def structural_check(record: dict, chunks: list) -> dict:
     return {"answerable": sufficient, "source_retrieved": source_retrieved, "retrieval": retrieval}
 
 
-def parse_answer(text: str) -> dict:
-    refused = aq.REFUSAL_PHRASE.lower() in text.lower()
-    letter = ANSWER_RE.search(text)
-    conf = CONFIDENCE_RE.search(text)
-    return {
-        "refused": refused,
-        "letter": letter.group(1).upper() if letter else None,
-        "confidence": int(conf.group(1)) if conf else None,
-    }
-
-
 def model_check(record: dict, retrieval: dict, client, prompt_name: str) -> dict:
     context, sufficient = aq.build_retrieved_context(retrieval)
     if not sufficient:
-        return {"refused": True, "letter": None, "confidence": None, "correct": False}
+        return {"refused": True, "letter": None, "confidence": None, "correct": False, "faithful": True}
     prompt_text = aq.load_prompt(prompt_name, context)
     raw = aq.answer(client, prompt_text, question_text(record))
-    parsed = parse_answer(raw)
-    parsed["correct"] = parsed["letter"] == record["correct"] and not parsed["refused"]
-    return parsed
+    assess = vf.deterministic_assess(raw, question_text(record), context)
+    return {
+        "refused": assess["refused"],
+        "letter": assess["letter"],
+        "confidence": assess["confidence"],
+        "correct": assess["letter"] == record["correct"] and not assess["refused"],
+        "faithful": assess["faithful"],
+    }
 
 
 def report_calibration(rows: list) -> None:
@@ -152,7 +143,7 @@ def main() -> int:
 
     struct_failures = 0
     calib_rows = []
-    answered = correct = refused = 0
+    answered = correct = refused = unfaithful = 0
 
     for r in records:
         s = structural_check(r, chunks)
@@ -176,9 +167,11 @@ def main() -> int:
             else:
                 answered += 1
                 correct += int(m["correct"])
+                unfaithful += 0 if m["faithful"] else 1
                 calib_rows.append((m["confidence"], m["correct"]))
                 mark = "✓" if m["correct"] else "✗"
-                line += f"  | model: {m['letter']} (conf {m['confidence']}) want {r['correct']} {mark}"
+                faith = "" if m["faithful"] else " ⚠faithfulness"
+                line += f"  | model: {m['letter']} (conf {m['confidence']}) want {r['correct']} {mark}{faith}"
         print(line)
 
     print(f"\nStructural: {len(records) - struct_failures}/{len(records)} passed "
@@ -189,6 +182,8 @@ def main() -> int:
         accuracy = (correct / answered) if answered else 0.0
         print(f"Model: answered {answered}, refused {refused}, "
               f"accuracy {correct}/{answered} = {accuracy:.0%}.")
+        print(f"Faithfulness: {answered - unfaithful}/{answered} answers had no "
+              f"citation/grounding flags.")
         report_calibration(calib_rows)
 
     failed = struct_failures > 0 or (accuracy is not None and accuracy < args.min_accuracy)
