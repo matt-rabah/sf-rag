@@ -291,8 +291,10 @@ Why the others are wrong:
 - D: ...
 ```
 
-Questions with an E option are handled the same way. When retrieval is too weak
-to support an answer, the response is the refusal phrase instead (see below).
+Questions with an E option are handled the same way. **Multi-select** questions
+("choose 2", "select all that apply") return every correct letter, comma-separated
+(e.g. `Answer: B, D`). When retrieval is too weak to support an answer, the
+response is the refusal phrase instead (see below).
 
 ### Hallucination Controls
 

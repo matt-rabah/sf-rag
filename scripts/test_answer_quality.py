@@ -42,6 +42,12 @@ CHUNKS_FILE = PROJECT_ROOT / "data" / "chunks" / "grounding_chunks.jsonl"
 EVALS_FILE = PROJECT_ROOT / "evals" / "answer_tests.jsonl"
 
 
+def correct_set(record: dict) -> set:
+    """'correct' is a single letter ('C') or a list for multi-select (['B','D'])."""
+    value = record.get("correct")
+    return set(value) if isinstance(value, list) else {value}
+
+
 def validate(records: list) -> list:
     errors = []
     seen = set()
@@ -54,8 +60,9 @@ def validate(records: list) -> list:
         if not isinstance(opts, dict) or len(opts) < 2:
             errors.append(f"{rid}: needs an 'options' object with >= 2 choices")
             continue
-        if r.get("correct") not in opts:
-            errors.append(f"{rid}: 'correct' ({r.get('correct')}) is not one of the options")
+        answers = correct_set(r)
+        if not answers or not answers <= set(opts):
+            errors.append(f"{rid}: 'correct' ({r.get('correct')}) must be option letter(s)")
         for field in ("question", "expected_source_id", "exam_domain"):
             if not r.get(field):
                 errors.append(f"{rid}: missing '{field}'")
@@ -87,11 +94,12 @@ def model_check(record: dict, retrieval: dict, client, prompt_name: str) -> dict
     prompt_text = aq.load_prompt(prompt_name, context)
     raw = aq.answer(client, prompt_text, question_text(record))
     assess = vf.deterministic_assess(raw, question_text(record), context)
+    chosen = set(assess["letters"])
     return {
         "refused": assess["refused"],
-        "letter": assess["letter"],
+        "chosen": chosen,
         "confidence": assess["confidence"],
-        "correct": assess["letter"] == record["correct"] and not assess["refused"],
+        "correct": chosen == correct_set(record) and not assess["refused"],
         "faithful": assess["faithful"],
     }
 
@@ -171,7 +179,9 @@ def main() -> int:
                 calib_rows.append((m["confidence"], m["correct"]))
                 mark = "✓" if m["correct"] else "✗"
                 faith = "" if m["faithful"] else " ⚠faithfulness"
-                line += f"  | model: {m['letter']} (conf {m['confidence']}) want {r['correct']} {mark}{faith}"
+                got = ",".join(sorted(m["chosen"])) or "-"
+                want = ",".join(sorted(correct_set(r)))
+                line += f"  | model: {got} (conf {m['confidence']}) want {want} {mark}{faith}"
         print(line)
 
     print(f"\nStructural: {len(records) - struct_failures}/{len(records)} passed "

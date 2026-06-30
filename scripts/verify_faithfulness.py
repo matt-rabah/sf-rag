@@ -29,7 +29,10 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from test_keyword_retrieval import tokenize  # noqa: E402
 
-ANSWER_RE = re.compile(r"Answer:\s*\**\s*([A-E])\b", re.IGNORECASE)
+# The answer line may carry one letter ("C") or several for multi-select
+# ("B, D" / "B and D"). Capture the line, then pull standalone option letters.
+ANSWER_LINE_RE = re.compile(r"Answer:\s*\**\s*([^\n*]+)", re.IGNORECASE)
+LETTER_RE = re.compile(r"\b([A-E])\b", re.IGNORECASE)
 CONFIDENCE_RE = re.compile(r"Confidence:\s*\**\s*(\d{1,2})", re.IGNORECASE)
 URL_RE = re.compile(r"https?://[^\s)\]}>\"']+")
 SOURCE_REF_RE = re.compile(r"\bSource\s+(\d+)\b", re.IGNORECASE)
@@ -45,11 +48,20 @@ REFUSAL_MARKER = "i don't have enough source-backed information"
 
 def parse_answer(answer_text: str) -> dict:
     refused = REFUSAL_MARKER in answer_text.lower()
-    letter = ANSWER_RE.search(answer_text)
+    letters = []
+    line = ANSWER_LINE_RE.search(answer_text)
+    if line:
+        seen = set()
+        for c in LETTER_RE.findall(line.group(1)):
+            u = c.upper()
+            if u not in seen:
+                seen.add(u)
+                letters.append(u)
     conf = CONFIDENCE_RE.search(answer_text)
     return {
         "refused": refused,
-        "letter": letter.group(1).upper() if letter else None,
+        "letters": letters,
+        "letter": letters[0] if letters else None,  # convenience for single-answer display
         "confidence": int(conf.group(1)) if conf else None,
     }
 
@@ -104,15 +116,19 @@ def deterministic_assess(answer_text: str, question_text: str, context: str) -> 
             + ", ".join(f"Source {n}" for n in bad["source_refs"])
         )
 
+    # Check each selected option on its own so a grounded pick can't mask an
+    # off-context one in a multi-select answer.
     options = extract_options(question_text)
-    chosen = parsed["letter"]
-    if chosen and chosen in options:
-        gs = grounding_score(options[chosen], context)
-        if gs < OFF_CONTEXT_FLOOR:
-            cautions.append(
-                f"the chosen answer ({chosen}) barely overlaps the retrieved context "
-                f"(grounding {gs:.0%}) — it may not be source-backed"
-            )
+    weak = [
+        letter
+        for letter in parsed["letters"]
+        if letter in options and grounding_score(options[letter], context) < OFF_CONTEXT_FLOOR
+    ]
+    if weak:
+        cautions.append(
+            f"the chosen answer(s) {', '.join(weak)} barely overlap the retrieved context "
+            "— they may not be source-backed"
+        )
 
     return {**parsed, "cautions": cautions, "faithful": not cautions}
 
