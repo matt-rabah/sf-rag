@@ -315,6 +315,27 @@ The answering script layers several safeguards on top of the prompt templates:
 
 Use `--show-context` to see retrieval scores and whether the gate would refuse.
 
+## Measuring Answer Quality
+
+`evals/answer_tests.jsonl` is a labeled set of multiple-choice questions (with
+known correct answers, each grounded in a specific source document). The scorer
+runs them through the same retrieval + gate + answer path as the study tool:
+
+```bash
+# Structural checks only — no API key needed. Confirms each question's supporting
+# source is retrieved and the relevance gate would not wrongly refuse.
+python3 scripts/test_answer_quality.py --no-model
+
+# Full run (requires ANTHROPIC_API_KEY): also measures answer accuracy and how
+# well the model's stated confidence matches its real accuracy (calibration).
+python3 scripts/test_answer_quality.py
+```
+
+The structural checks run as part of `scripts/run_pipeline.py`, so retrieval
+regressions that would make a known-answerable question unanswerable are caught
+automatically. Use this harness to verify that changes (new sources, retriever
+tweaks, prompt edits) actually improve answers rather than just feeling better.
+
 ## RAG Design Principles
 
 This project prioritizes accuracy over broad coverage.
