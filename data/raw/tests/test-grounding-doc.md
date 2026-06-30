@@ -28,7 +28,7 @@ of a grounding document that can be used to test the system.
 
 ## Source Content
 
-# Example Source Content
+### Example Source Content
 
 This is a simple example of source content that can be used to test the grounding feature of the RAG
 system.

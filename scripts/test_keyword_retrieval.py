@@ -343,6 +343,21 @@ def score_chunk(question: str, chunk: dict):
         if normalize_text(topic) == "multi-agent orchestration beta":
             score -= 6
 
+    # Boost deployment chunks for channel/activation questions
+    is_deployment_question = (
+        "available to customers" in question_normalized
+        or "available to employees" in question_normalized
+        or ("activated" in question_normalized and "available" in question_normalized)
+    )
+
+    if is_deployment_question:
+        if normalize_text(topic) == "agent deployment channels":
+            score += 15
+        if "agentforce-deploy-agent-to-channels" in chunk.get("source_id", ""):
+            score += 12
+        if "channels" in combined_normalized:
+            score += 8
+
     # Boost sandbox chunks for sandbox-related questions
     is_sandbox_question = (
         "sandbox" in question_normalized
