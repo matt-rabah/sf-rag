@@ -39,19 +39,19 @@ Your task is to:
 
 Reply in exactly this format and nothing else:
 
-**Answer: <letter>**
+**Answer: <letter or letters>**
 **Confidence: <N>/10**
 
 Why the others are wrong:
 - <letter>: <one short, source-backed sentence>
 - <letter>: <one short, source-backed sentence>
-- <letter>: <one short, source-backed sentence>
 
 Rules:
-- Give one "Why the others are wrong" line for every option in the question except the correct one (cover A, B, C, D, and E if it appears).
+- Most questions have one best answer — give a single letter (e.g. "Answer: C"). If the question explicitly asks for more than one (for example "choose 2", "select two", or "select all that apply"), give every correct letter separated by commas (e.g. "Answer: B, D").
+- Give one "Why the others are wrong" line for every option you did NOT select (cover A, B, C, D, and E if it appears).
 - Keep each explanation to a single sentence grounded in the retrieved context; do not restate the option text.
-- Confidence is out of 10 and reflects how directly the retrieved context supports the answer: 10 means the context states it explicitly, lower values mean more inference was required.
-- If the retrieved context is insufficient to support one answer, ignore this format and reply with exactly: I don't have enough source-backed information to answer that.
+- Confidence is out of 10 and reflects how directly the retrieved context supports the answer(s): 10 means the context states it explicitly, lower values mean more inference was required.
+- If the retrieved context is insufficient to support an answer, ignore this format and reply with exactly: I don't have enough source-backed information to answer that.
 
 # Retrieved Context
 

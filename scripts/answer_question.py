@@ -366,18 +366,21 @@ def main() -> int:
     assessment = verify_faithfulness.deterministic_assess(answer_text, question, retrieved_context)
     cautions = list(assessment["cautions"])
 
-    # Optional LLM entailment judge: confirm the context actually supports the answer.
-    if args.verify and assessment["letter"] and not assessment["refused"]:
+    # Optional LLM entailment judge: confirm the context actually supports the answer(s).
+    if args.verify and assessment["letters"] and not assessment["refused"]:
         options = verify_faithfulness.extract_options(question)
-        option_text = options.get(assessment["letter"], "")
+        chosen = ", ".join(assessment["letters"])
+        option_text = "; ".join(
+            f"{letter}. {options.get(letter, '')}" for letter in assessment["letters"]
+        )
         print("Verifying the answer is entailed by the sources...", file=sys.stderr)
         verdict = verify_faithfulness.llm_verify(
-            client, MODEL, retrieved_context, question, assessment["letter"], option_text
+            client, MODEL, retrieved_context, question, chosen, option_text
         )
         if verdict["supported"] is False:
             cautions.append(
                 f"an independent grounding check did NOT find support for answer "
-                f"{assessment['letter']} in the retrieved context ({verdict['reason']})"
+                f"{chosen} in the retrieved context ({verdict['reason']})"
             )
 
     print(answer_text)
